@@ -6,9 +6,11 @@ on:
       - master
 
 jobs:
-  build:
+  bump:
     runs-on: ubuntu-latest
     name: Bump version
+
+    if: "!contains(github.event.head_commit.author.name, 'Bump version')"
 
     steps:
       - name: Checkout code
@@ -32,5 +34,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_ADMIN_PUSH_TOKEN }}
           tags: true
