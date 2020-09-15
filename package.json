@@ -1,11 +1,11 @@
 {
-  "name": "@ckapps/math",
+  "name": "@ckapp/math",
   "description": "Package of math utilities for JS / TS",
   "version": "0.0.2-4",
   "license": "MIT",
   "author": "Chris",
   "bugs": {
-    "url": "https://github.com/ckapp/math/issues"
+    "url": "https://github.com/ckapps/math/issues"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm5/index.js",
