@@ -1,6 +1,6 @@
 ![CI](https://github.com/ckapps/math/workflows/CI/badge.svg)
 [![npm version](https://badge.fury.io/js/%40ckapp%2Fmath.svg)](https://www.npmjs.com/@ckapp/math)
-[![Coverage Status](https://coveralls.io/repos/github/ckapps/math/badge.svg)](https://coveralls.io/github/ckapps/math)
+[![Coverage Status](https://coveralls.io/repos/github/ckapps/math/badge.svg?branch=master)](https://coveralls.io/github/ckapps/math?branch=master)
 
 # @ckapp/math
 
