@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['11', '12', '13', '14']
+        node: ['12', '14']
 
     name: Node ${{ matrix.node }} build
 
@@ -19,9 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: install
-        run: |
-          npm install -g npm@latest
-          npm ci
+        run: npm ci
       - name: lint
         run: npm run lint
       - name: build
