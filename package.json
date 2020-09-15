@@ -7,13 +7,13 @@
   "bugs": {
     "url": "https://github.com/ckapps/math/issues"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm5/index.js",
-  "es2015": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm5/index.js",
+  "es2015": "./lib/esm/index.js",
+  "types": "./lib/types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build:clean": "shx rm -rf ./dist",
+    "build:clean": "shx rm -rf ./lib",
     "compile": "tsc -b ./src/tsconfig.cjs.json ./src/tsconfig.esm.json ./src/tsconfig.esm5.json ./src/tsconfig.types.json",
     "build:package": "npm-run-all build:clean compile",
     "lint": "eslint .",
@@ -64,11 +64,10 @@
     }
   },
   "files": [
-    "dist/cjs/**/!(*.tsbuildinfo)",
-    "dist/esm/**/!(*.tsbuildinfo)",
-    "dist/esm5/**/!(*.tsbuildinfo)",
-    "dist/types/**/!(*.tsbuildinfo)",
-    "src",
+    "lib/cjs/**/!(*.tsbuildinfo)",
+    "lib/esm/**/!(*.tsbuildinfo)",
+    "lib/esm5/**/!(*.tsbuildinfo)",
+    "lib/types/**/!(*.tsbuildinfo)",
     "CHANGELOG.md",
     "LICENSE",
     "package.json",
