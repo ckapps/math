@@ -4,6 +4,5 @@
     "module": "commonjs",
     "target": "es5",
     "outDir": "../dist/cjs"
-  },
-  "exclude": ["./internal/umd.ts"]
+  }
 }
