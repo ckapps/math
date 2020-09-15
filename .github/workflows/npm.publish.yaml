@@ -1,7 +1,7 @@
 name: Node.js Package
 on:
   release:
-    types: [created]
+    types: [prereleased, released]
 jobs:
   build:
     runs-on: ubuntu-latest
