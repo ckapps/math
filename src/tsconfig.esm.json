@@ -4,6 +4,6 @@
     "module": "esnext",
     "importHelpers": true,
     "target": "es2015",
-    "outDir": "../dist/esm"
+    "outDir": "../lib/esm"
   }
 }
