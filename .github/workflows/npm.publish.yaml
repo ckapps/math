@@ -1,9 +1,10 @@
-name: Node.js Package
+name: Publish
 on:
   release:
-    types: [prereleased, released]
+    types: [published]
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
