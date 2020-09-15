@@ -1,0 +1,29 @@
+name: Bump version (pre release)
+
+on:
+    push:
+      branches:
+        - master
+  
+  jobs:
+    build:
+      name: Bump version
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+          with:
+            # otherwise, you will failed to push refs to dest repo
+            fetch-depth: 0
+        - uses: actions/setup-node@v1
+        - name: install
+          run: |
+            npm install -g npm@latest
+            npm ci
+        - name: Run standard-version
+          run: npm run release:pre
+        - name: Push changes
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            tags: true
