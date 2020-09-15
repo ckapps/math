@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-10](https://github.com/ckapps/math/compare/v0.0.2-9...v0.0.2-10) (2020-09-15)
+
+
+### Features
+
+* add conversions between rad and deg ([e511bb0](https://github.com/ckapps/math/commit/e511bb000d299d3d5f1a382d34285a7fdc908407))
+
+
+### Bug Fixes
+
+* export lerp ([865fcbb](https://github.com/ckapps/math/commit/865fcbb3426356e4732551e950d49ec16f42ca81))
+
 ### [0.0.2-9](https://github.com/ckapps/math/compare/v0.0.2-8...v0.0.2-9) (2020-09-15)
 
 
