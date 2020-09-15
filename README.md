@@ -8,7 +8,7 @@ Utility package for math related operations.
 ## Branches / Versions
 
 - [master](https://github.com/ckapps/math/commits/master) - Contains the most recent and unreleased changes
-- [stable](https://github.com/ckapps/math/tree/1.x) - Contains the latest version you'd get if you do `npm install rxjs`
+- [stable](https://github.com/ckapps/math/tree/1.x) - Contains the latest version you'd get if you do `npm install @ckapp/math`
 
 Most PRs should be made to **master**.
 
