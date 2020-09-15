@@ -1,0 +1,34 @@
+{
+  "name": "@ckapps/math",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Chris",
+  "bugs": {
+    "url": "https://github.com/ckapp/math/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "release": "standard-version",
+    "prerelease": "npm run release --prerelease"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "standard-version": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  }
+}
