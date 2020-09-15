@@ -1,7 +1,7 @@
 {
   "name": "@ckapps/math",
   "description": "Package of math utilities for JS / TS",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "license": "MIT",
   "author": "Chris",
   "bugs": {
@@ -18,7 +18,7 @@
     "build:package": "npm-run-all build:clean compile",
     "lint": "eslint .",
     "release": "standard-version",
-    "prerelease": "npm run release --prerelease",
+    "release:pre": "npm run release -- --prerelease",
     "test": "jest",
     "test:coverage": "npm test -- --coverage"
   },
