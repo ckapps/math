@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-11](https://github.com/ckapps/math/compare/v0.0.2-10...v0.0.2-11) (2020-09-16)
+
 ### [0.0.2-10](https://github.com/ckapps/math/compare/v0.0.2-9...v0.0.2-10) (2020-09-15)
 
 
