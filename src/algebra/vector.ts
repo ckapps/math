@@ -142,6 +142,17 @@ export class Vector {
   }
 
   /**
+   * @param a Point a
+   * @param b Point b
+   *
+   * @returns
+   * The distance between `a` and `b`.
+   */
+  public static distance<T extends Vector>(a: T, b: T) {
+    return Vector.subtract(a, b).magnitude;
+  }
+
+  /**
    * @param a First vector
    * @param b Second vector
    *

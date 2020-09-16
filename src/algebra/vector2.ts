@@ -105,6 +105,10 @@ export class Vector2 extends Vector {
     return Vector.dot(a, b);
   }
 
+  public static distance(a: Vector2, b: Vector2) {
+    return Vector.distance(a, b);
+  }
+
   public static min(...others: Vector2[]): Vector2 {
     return Vector.min(...others);
   }
