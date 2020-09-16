@@ -41,7 +41,7 @@ export class Vector {
    * Length of this vector, squared.
    */
   public get sqrtMagnitude() {
-    return this.dot(this);
+    return Vector.dot(this, this);
   }
 
   /**
@@ -49,55 +49,7 @@ export class Vector {
    * of the result vector is `1`, but the orientation is preserved.
    */
   public get normalized() {
-    return this.divide(this.magnitude);
-  }
-
-  /**
-   * @param other The other vector
-   *
-   * @returns
-   * The dot product of `this` and `other`
-   */
-  public dot(other: Vector) {
-    return Vector.map([this, other], (_, n) =>
-      n.reduce((acc, cur) => acc * cur),
-    ).reduce((acc, cur) => acc + cur);
-  }
-
-  /**
-   * Sums all values of the same vector component.
-   *
-   * @param others Array of vectors to add
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public add(...others: Vector[]) {
-    return Vector.add(this, ...others);
-  }
-
-  /**
-   * Scales all components of the vector by the given `scalar`.
-   *
-   * @param scalar The scalar used for scaling
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public scale(scalar: number) {
-    return create(scale(this._components, scalar));
-  }
-
-  /**
-   * Divides all components of the vector by the given `scalar`.
-   *
-   * @param scalar The scalar used for dividing
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public divide(scalar: number) {
-    return this.scale(1 / scalar);
+    return Vector.divide(this, this.magnitude);
   }
 
   public toString() {
@@ -120,13 +72,38 @@ export class Vector {
   }
 
   /**
+   * Scales all components of the vector by the given `scalar`.
+   *
+   * @param v The vector to scale
+   * @param scalar The scalar used for scaling
+   *
+   * @returns
+   * A new instance of `Vector`
+   */
+  public static scale<T extends Vector>(v: T, scalar: number) {
+    return create<T>(scale(v._components, scalar));
+  }
+
+  /**
+   * Divides all components of the vector by the given `scalar`.
+   *
+   * @param scalar The scalar used for dividing
+   *
+   * @returns
+   * A new instance of `Vector`
+   */
+  public static divide<T extends Vector>(v: T, scalar: number) {
+    return Vector.scale(v, 1 / scalar);
+  }
+
+  /**
    * @param vectors Array of vectors
    *
    * @returns
    * A new instance of vector with the minimum values for each component
    */
-  public static min(...vectors: Vector[]) {
-    return create(Vector.map(vectors, (_, n) => Math.min(...n)));
+  public static min<T extends Vector>(...vectors: T[]) {
+    return create<T>(Vector.map(vectors, (_, n) => Math.min(...n)));
   }
 
   /**
@@ -135,8 +112,21 @@ export class Vector {
    * @returns
    * A new instance of vector with the maximum values for each component
    */
-  public static max(...vectors: Vector[]) {
-    return create(Vector.map(vectors, (_, n) => Math.max(...n)));
+  public static max<T extends Vector>(...vectors: T[]) {
+    return create<T>(Vector.map(vectors, (_, n) => Math.max(...n)));
+  }
+
+  /**
+   * @param a First vector
+   * @param b First vector
+   *
+   * @returns
+   * The dot product of `this` and `other`
+   */
+  public static dot(a: Vector, b: Vector) {
+    return Vector.map([a, b], (_, n) =>
+      n.reduce((acc, cur) => acc * cur),
+    ).reduce((acc, cur) => acc + cur);
   }
 
   /**

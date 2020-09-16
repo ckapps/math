@@ -40,7 +40,7 @@ describe('algebra/vector3', () => {
       [Vector3.forward, Vector3.right, Vector3.up],
       [Vector3.left, Vector3.forward, Vector3.up],
     ])('%s x %s = %s', (a: Vector3, b: Vector3, expected) => {
-      const result = a.cross(b);
+      const result = Vector3.cross(a, b);
       compare(result, expected);
     });
   });

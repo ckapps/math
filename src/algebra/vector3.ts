@@ -1,7 +1,69 @@
-import { Vector } from './vector';
 import { addFactory } from './vector_base';
+import { Vector } from './vector';
 
+/**
+ * Representation of 3-dimensional vectors and points
+ */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export class Vector3 extends Vector {
+  /**
+   * Type guard to prevent mixing Vectors of
+   * different dimensions
+   */
+  private __vector3__ = true;
+
+  constructor(x: number, y: number, z: number) {
+    super(x, y, z);
+  }
+
+  /** The x component */
+  public get x() {
+    return this._components[0];
+  }
+  public set x(value: number) {
+    this._components[0] = value;
+  }
+
+  /** The y component */
+  public get y() {
+    return this._components[1];
+  }
+  public set y(value: number) {
+    this._components[1] = value;
+  }
+
+  /** The z component */
+  public get z() {
+    return this._components[2];
+  }
+  public set z(value: number) {
+    this._components[2] = value;
+  }
+
+  public toString() {
+    return `Vector3[${this.components.join(',')}]`;
+  }
+
+  // ============================================
+  // Static
+  // ============================================
+  /**
+   * Calculates the cross product of both vectors.
+   *
+   * @param b The other vector
+   *
+   * @returns
+   * A vector that is perpendicular to `this` and `other`
+   */
+  public static cross(a: Vector3, b: Vector3) {
+    return new Vector3(
+      a.y * b.z - a.z * b.y,
+      a.z * b.x - a.x * b.z,
+      a.x * b.y - a.y * b.x,
+    );
+  }
+
   /**
    * Vector3(0, 0, 0).
    */
@@ -51,82 +113,30 @@ export class Vector3 extends Vector {
     return new Vector3(0, 0, -1);
   }
 
-  constructor(x: number, y: number, z: number) {
-    super(x, y, z);
-  }
-
-  public get x() {
-    return this._components[0];
-  }
-  public set x(value: number) {
-    this._components[0] = value;
-  }
-
-  public get y() {
-    return this._components[1];
-  }
-  public set y(value: number) {
-    this._components[1] = value;
-  }
-
-  public get z() {
-    return this._components[2];
-  }
-  public set z(value: number) {
-    this._components[2] = value;
-  }
-
   // ============================================
-  // Override for type safety - members
+  // Override for type safety
   // ============================================
-  public add(...others: Vector3[]): Vector3;
-  public add(...others: Vector[]): Vector {
-    return super.add(...others);
+  public static add(...others: Vector3[]) {
+    return Vector.add(...others);
   }
 
-  public scale(scalar: number): Vector3;
-  public scale(scalar: number): Vector {
-    return super.scale(scalar);
+  public static scale(v: Vector3, scalar: number) {
+    return Vector.scale(v, scalar);
   }
 
-  public divide(scalar: number): Vector3;
-  public divide(scalar: number): Vector {
-    return super.divide(scalar);
+  public static divide(v: Vector3, scalar: number) {
+    return Vector.divide(v, scalar);
   }
 
-  public dot(other: Vector3): number;
-  public dot(other: Vector) {
-    return super.dot(other);
+  public static dot(a: Vector3, b: Vector3) {
+    return Vector.dot(a, b);
   }
 
-  /**
-   * Calculates the cross product of both vectors.
-   *
-   * @param other The other vector
-   *
-   * @returns
-   * A vector that is perpendicular to `this` and `other`
-   */
-  public cross(other: Vector3) {
-    return new Vector3(
-      this.y * other.z - this.z * other.y,
-      this.z * other.x - this.x * other.z,
-      this.x * other.y - this.y * other.x,
-    );
-  }
-  public toString() {
-    return `Vector3[${this.components.join(',')}]`;
-  }
-  // ============================================
-  // Override for type safety - static
-  // ============================================
-  public static min(...others: Vector3[]): Vector3;
-  public static min(...others: Vector[]): Vector {
+  public static min(...others: Vector3[]): Vector3 {
     return Vector.min(...others);
   }
 
-  public static max(...others: Vector3[]): Vector3;
-  public static max(...others: Vector[]): Vector {
+  public static max(...others: Vector3[]): Vector3 {
     return Vector.max(...others);
   }
 }
