@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-13](https://github.com/ckapps/math/compare/v0.0.2-12...v0.0.2-13) (2020-09-16)
+
+
+### Features
+
+* added basic implementation of vector related stuff ([d6ba7a0](https://github.com/ckapps/math/commit/d6ba7a061c3d902efec8014860411cede76a518c))
+* added function subtract ([533ddfa](https://github.com/ckapps/math/commit/533ddfaee0aeb59a3a23adf500f523fd6611da4c))
+* added subtract to vectors ([130fb9c](https://github.com/ckapps/math/commit/130fb9cae2686502962108760bf21cccf1a3566a))
+* added vector function distance ([085e1a0](https://github.com/ckapps/math/commit/085e1a0ae34871fded3c9d72e6ba031813a02cc0))
+* implemented vector, vector2 and vector 3 ([05b0f7e](https://github.com/ckapps/math/commit/05b0f7e033fe0dcfd70a214249e29c52194f2648))
+
+
+### Bug Fixes
+
+* typing for vector ([c79259f](https://github.com/ckapps/math/commit/c79259f27a281924cd0040f70403046144f09a9a))
+
 ### [0.0.2-12](https://github.com/ckapps/math/compare/v0.0.2-11...v0.0.2-12) (2020-09-16)
 
 ### [0.0.2-11](https://github.com/ckapps/math/compare/v0.0.2-10...v0.0.2-11) (2020-09-16)
