@@ -166,33 +166,33 @@ describe('algebra/vector', () => {
         expect(result.components).toEqual(expected);
       });
     });
-  });
 
-  describe('distance', () => {
-    const cases: [number, Vector, Vector][] = [
-      [0, new Vector(0, 0), new Vector(0, 0)],
-      [2, new Vector(0, 1), new Vector(0, -1)],
-      [4, new Vector(0, -2), new Vector(0, 2)],
-      [16, new Vector(-8, 0), new Vector(8, 0)],
-    ];
+    describe('distance', () => {
+      const cases: [number, Vector, Vector][] = [
+        [0, new Vector(0, 0), new Vector(0, 0)],
+        [2, new Vector(0, 1), new Vector(0, -1)],
+        [4, new Vector(0, -2), new Vector(0, 2)],
+        [16, new Vector(-8, 0), new Vector(8, 0)],
+      ];
 
-    test.each(cases)('should return %p', (expected, a, b) => {
-      const result = Vector.distance(a, b);
-      expect(result).toEqual(expected);
+      test.each(cases)('should return %p', (expected, a, b) => {
+        const result = Vector.distance(a, b);
+        expect(result).toEqual(expected);
+      });
     });
-  });
 
-  describe('equals', () => {
-    const cases: [boolean, Vector, Vector][] = [
-      [false, new Vector(0, 0), new Vector(1, 1)],
-      [false, new Vector(0, 1), new Vector(1, 0)],
-      [true, new Vector(0, 0), new Vector(0, 0)],
-      [true, new Vector(1, 0), new Vector(1, 0)],
-    ];
+    describe('equals', () => {
+      const cases: [boolean, Vector, Vector][] = [
+        [false, new Vector(0, 0), new Vector(1, 1)],
+        [false, new Vector(0, 1), new Vector(1, 0)],
+        [true, new Vector(0, 0), new Vector(0, 0)],
+        [true, new Vector(1, 0), new Vector(1, 0)],
+      ];
 
-    test.each(cases)('should return %p', (expected, a, b) => {
-      const result = Vector.equals(a, b);
-      expect(result).toEqual(expected);
+      test.each(cases)('should return %p', (expected, a, b) => {
+        const result = Vector.equals(a, b);
+        expect(result).toEqual(expected);
+      });
     });
   });
 });
