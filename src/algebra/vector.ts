@@ -2,15 +2,23 @@ import { scale, sum } from '../base';
 import { create } from './vector_base';
 
 /**
- * a
+ * Representation of n-dimensional vectors and points
  */
 export class Vector {
   protected _components: number[];
 
+  /**
+   * Creates a new vector
+   *
+   * @param components The vector components
+   */
   constructor(...components: number[]) {
     this._components = components;
   }
 
+  /**
+   * The vector components
+   */
   public get components() {
     return this._components;
   }
@@ -19,8 +27,9 @@ export class Vector {
   }
 
   /**
-   * Length of this vector
-   * The length of the vector is square root of `(x*x+y*y+z*z)`.
+   * Length of this vector.
+   * The length of the vector is square root of its components
+   * `(x * x + y * y + z * z + ...)`.
    *
    * If comparing vector magnitudes is enough, please consider `sqrtMagnitude`
    */
@@ -35,10 +44,20 @@ export class Vector {
     return this.dot(this);
   }
 
+  /**
+   * Vector in its normalized form, meaning that the `magnitude`
+   * of the result vector is `1`, but the orientation is preserved.
+   */
   public get normalized() {
     return this.divide(this.magnitude);
   }
 
+  /**
+   * @param other The other vector
+   *
+   * @returns
+   * The dot product of `this` and `other`
+   */
   public dot(other: Vector) {
     return Vector.map([this, other], (_, n) =>
       n.reduce((acc, cur) => acc * cur),
@@ -120,10 +139,24 @@ export class Vector {
     return create(Vector.map(vectors, (_, n) => Math.max(...n)));
   }
 
+  /**
+   * @param a First vector
+   * @param b Second vector
+   *
+   * @returns
+   * `true`, if the components of vector `a` and `b` match.
+   * Otherwise `false`.
+   */
   public static equals(a: Vector, b: Vector) {
     return Vector.every([a, b], (_, numbers) => numbers[0] === numbers[1]);
   }
 
+  /**
+   * For each per vector component with the ability to abort by return `false` from `fn`.
+   *
+   * @param vectors Vectors on which `fn` should be executed
+   * @param fn Callback
+   */
   protected static forEachAbort(
     vectors: Vector[],
     fn: (index: number, numbers: number[]) => boolean,
@@ -142,6 +175,12 @@ export class Vector {
     }
   }
 
+  /**
+   * For each per vector component
+   *
+   * @param vectors Vectors on which `fn` should be executed
+   * @param fn Callback
+   */
   protected static forEach(
     vectors: Vector[],
     fn: (index: number, numbers: number[]) => void,
@@ -152,6 +191,13 @@ export class Vector {
     });
   }
 
+  /**
+   * @param vectors Vectors on which `fn` is executed
+   * @param fn Callback
+   *
+   * @returns
+   * `true`, if `fn` didn't return a falsy value.
+   */
   protected static every(
     vectors: Vector[],
     fn: (index: number, numbers: number[]) => boolean,
@@ -169,6 +215,13 @@ export class Vector {
     return fulfilled;
   }
 
+  /**
+   * Applies a projection function on every vector component
+   * of the given `vectors`.
+   *
+   * @param vectors Vectors on which the `projection` is applied
+   * @param project Projection function
+   */
   protected static map<T>(
     vectors: Vector[],
     project: (index: number, numbers: number[]) => T,

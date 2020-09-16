@@ -5,7 +5,9 @@ const vectorFactoryMap = new Map<number, VectorCtor>();
 
 /**
  * Uses the length of `components` to determine the
- * explicit `n` dimensional vector constructor
+ * explicit `n` dimensional vector constructor.
+ *
+ * For internal use.
  *
  * @param components Components of the vector
  *
@@ -22,6 +24,9 @@ export function create<T = Vector>(components: number[]): T {
 
 /**
  * Adds a new factory to create an `n`-dimensional vector.
+ *
+ * For internal use
+ *
  * @param n Number of dimensions
  * @param ctor Constructor
  */
