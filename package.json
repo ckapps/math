@@ -41,22 +41,6 @@
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "testRegex": "^.+\\.spec\\.ts$",
-    "collectCoverageFrom": [
-      "src/**/*",
-      "!src/**/index.ts",
-      "!**/node_modules/**",
-      "!**/vendor/**"
-    ]
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
