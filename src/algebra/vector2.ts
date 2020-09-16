@@ -89,6 +89,10 @@ export class Vector2 extends Vector {
     return Vector.add(...others);
   }
 
+  public static subtract(...others: Vector2[]) {
+    return Vector.subtract(...others);
+  }
+
   public static scale(v: Vector2, scalar: number) {
     return Vector.scale(v, scalar);
   }

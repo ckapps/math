@@ -120,6 +120,10 @@ export class Vector3 extends Vector {
     return Vector.add(...others);
   }
 
+  public static subtract(...others: Vector3[]) {
+    return Vector.subtract(...others);
+  }
+
   public static scale(v: Vector3, scalar: number) {
     return Vector.scale(v, scalar);
   }

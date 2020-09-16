@@ -1,4 +1,4 @@
-import { scale, sum } from '../base';
+import { scale, subtract, sum } from '../base';
 import { create } from './vector_base';
 
 /**
@@ -69,6 +69,18 @@ export class Vector {
    */
   public static add<T extends Vector>(...others: T[]): T {
     return create<T>(Vector.map(others, (_, numbers) => sum(...numbers)));
+  }
+
+  /**
+   * Subtracts all values of the same vector component.
+   *
+   * @param vectors Vectors
+   *
+   * @returns
+   * A new instance of `Vector`
+   */
+  public static subtract<T extends Vector>(...vectors: T[]): T {
+    return create<T>(Vector.map(vectors, (_, numbers) => subtract(...numbers)));
   }
 
   /**
