@@ -5,12 +5,27 @@ describe('algebra/vector', () => {
     expect(Vector.equals(a, b)).toBe(true);
   }
 
-  it('should create', () => {
+  describe('with instance', () => {
     const x = 0;
     const y = 0;
-    const v = new Vector(x, y);
-    expect(v.components[0]).toBe(x);
-    expect(v.components[1]).toBe(y);
+    const args = [x, y];
+    let v: Vector;
+
+    beforeEach(() => {
+      v = new Vector(...args);
+    });
+
+    it('should create', () => {
+      expect(v).toBeDefined();
+    });
+
+    it('should return components', () => {
+      expect(v.components).toEqual(args);
+    });
+
+    it('toString returns string', () => {
+      expect(typeof v.toString()).toBe('string');
+    });
   });
 
   describe('normalized', () => {
