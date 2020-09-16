@@ -1,4 +1,5 @@
 import { scale, sum } from '../base';
+import { create } from './vector_base';
 
 /**
  * a
@@ -17,23 +18,31 @@ export class Vector {
     this._components = value;
   }
 
+  /**
+   * Length of this vector
+   * The length of the vector is square root of `(x*x+y*y+z*z)`.
+   *
+   * If comparing vector magnitudes is enough, please consider `sqrtMagnitude`
+   */
   public get magnitude() {
-    return 0;
+    return Math.sqrt(this.sqrtMagnitude);
+  }
+
+  /**
+   * Length of this vector, squared.
+   */
+  public get sqrtMagnitude() {
+    return this.dot(this);
   }
 
   public get normalized() {
-    return 0;
+    return this.divide(this.magnitude);
   }
 
-  public get sqrMagnitude() {
-    return 0;
-  }
-
-  public dot() {
-    return 0;
-  }
-  public cross() {
-    return 0;
+  public dot(other: Vector) {
+    return Vector.map([this, other], (_, n) =>
+      n.reduce((acc, cur) => acc * cur),
+    ).reduce((acc, cur) => acc + cur);
   }
 
   /**
@@ -44,8 +53,8 @@ export class Vector {
    * @returns
    * A new instance of `Vector`
    */
-  public add<T extends Vector>(...others: T[]): Vector {
-    return Vector.add(Vector, this, ...others);
+  public add(...others: Vector[]) {
+    return Vector.add(this, ...others);
   }
 
   /**
@@ -57,7 +66,7 @@ export class Vector {
    * A new instance of `Vector`
    */
   public scale(scalar: number) {
-    return new Vector(...scale(this._components, scalar));
+    return create(scale(this._components, scalar));
   }
 
   /**
@@ -72,6 +81,13 @@ export class Vector {
     return this.scale(1 / scalar);
   }
 
+  public toString() {
+    return `Vector: ${this.components.join(',')}`;
+  }
+
+  // ============================================
+  // static implementations
+  // ============================================
   /**
    * Sums all values of the same vector component.
    *
@@ -80,8 +96,8 @@ export class Vector {
    * @returns
    * A new instance of `Vector`
    */
-  public static add(...others: Vector[]) {
-    return new Vector(...Vector.map(others, (_, numbers) => sum(...numbers)));
+  public static add<T extends Vector>(...others: T[]): T {
+    return create<T>(Vector.map(others, (_, numbers) => sum(...numbers)));
   }
 
   /**
@@ -91,7 +107,7 @@ export class Vector {
    * A new instance of vector with the minimum values for each component
    */
   public static min(...vectors: Vector[]) {
-    return new Vector(...Vector.map(vectors, (_, n) => Math.min(...n)));
+    return create(Vector.map(vectors, (_, n) => Math.min(...n)));
   }
 
   /**
@@ -101,24 +117,56 @@ export class Vector {
    * A new instance of vector with the maximum values for each component
    */
   public static max(...vectors: Vector[]) {
-    return new Vector(...Vector.map(vectors, (_, n) => Math.max(...n)));
+    return create(Vector.map(vectors, (_, n) => Math.max(...n)));
+  }
+
+  public static equals(a: Vector, b: Vector) {
+    return Vector.every([a, b], (_, numbers) => numbers[0] === numbers[1]);
+  }
+
+  protected static forEachAbort(
+    vectors: Vector[],
+    fn: (index: number, numbers: number[]) => boolean,
+  ) {
+    const length = Math.max(...vectors.map(v => v._components.length));
+
+    for (let i = 0; i < length; ++i) {
+      const result = fn(
+        i,
+        vectors.map(v => v._components[i]),
+      );
+
+      if (result === false) {
+        return;
+      }
+    }
   }
 
   protected static forEach(
     vectors: Vector[],
-    fn: (index: number, numbers: number[]) => number,
+    fn: (index: number, numbers: number[]) => void,
   ) {
-    const length = Math.max(...vectors.map(v => v._components.length));
+    Vector.forEachAbort(vectors, (_, numbers) => {
+      fn(_, numbers);
+      return true; // Don't abort
+    });
+  }
 
-    const components = new Array(length);
-    for (let i = 0; i < length; ++i) {
-      fn(
-        i,
-        vectors.map(v => v._components[i]),
-      );
-    }
+  protected static every(
+    vectors: Vector[],
+    fn: (index: number, numbers: number[]) => boolean,
+  ): boolean {
+    let fulfilled = true;
 
-    return components;
+    Vector.forEachAbort(vectors, (_, numbers) => {
+      const match = fn(_, numbers);
+      if (!match) {
+        fulfilled = false;
+      }
+      return fulfilled;
+    });
+
+    return fulfilled;
   }
 
   protected static map<T>(
