@@ -135,7 +135,7 @@ export class Vector {
    * @returns
    * The dot product of `this` and `other`
    */
-  public static dot(a: Vector, b: Vector) {
+  public static dot<T extends Vector>(a: T, b: T) {
     return Vector.map([a, b], (_, n) =>
       n.reduce((acc, cur) => acc * cur),
     ).reduce((acc, cur) => acc + cur);
