@@ -18,9 +18,14 @@
   "sideEffects": false,
   "scripts": {
     "build:clean": "shx rm -rf ./lib",
-    "compile": "tsc -b ./src/tsconfig.cjs.json ./src/tsconfig.esm.json ./src/tsconfig.esm5.json ./src/tsconfig.types.json",
-    "build:package": "npm-run-all build:clean compile",
+    "compile": "tsc -b ./src/tsconfig.cjs.json ./src/tsconfig.esm.json ./src/tsconfig.esm5.json",
+    "build:declarations": "tsc -b ./src/tsconfig.types.json",
+    "build:fast": "npm-run-all build:clean compile",
+    "build:package": "npm-run-all build:clean compile build:declarations build:artefacts",
+    "build:artefacts": "npm-run-all copy:files copy:declarations",
     "lint": "eslint .",
+    "copy:files": "cp -a ./lib/cjs/. .",
+    "copy:declarations": "cp -a ./lib/types/. .",
     "release": "standard-version",
     "release:pre": "npm run release -- --prerelease",
     "test": "jest",
@@ -46,6 +51,8 @@
     "typescript": "^4.0.2"
   },
   "files": [
+    "**/*.d.ts",
+    "lib/cjs/**/!(*.tsbuildinfo)",
     "lib/cjs/**/!(*.tsbuildinfo)",
     "lib/esm/**/!(*.tsbuildinfo)",
     "lib/esm5/**/!(*.tsbuildinfo)",
@@ -53,7 +60,6 @@
     "CHANGELOG.md",
     "LICENSE",
     "package.json",
-    "README.md",
-    "tsconfig.json"
+    "README.md"
   ]
 }
