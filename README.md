@@ -9,16 +9,18 @@ Utility package for math related operations.
 ## Branches / Versions
 
 - [master](https://github.com/ckapps/math/commits/master) - Contains the most recent and unreleased changes
-- [stable](https://github.com/ckapps/math/tree/1.x) - Contains the latest version you'd get if you do `npm install @ckapp/math`
+- [stable](https://github.com/ckapps/math/tree/release/stable/1.x) - Contains the latest version you'd get if you do `npm install @ckapp/math`
 
 Most PRs should be made to **master**.
+
+Check our [branching and release strategy](https://github.com/ckapps/.github/blob/master/docs/branching.md).
 
 ## Installation and Usage
 
 ### ES6 via npm
 
 ```sh
-npm install @ckapp/math
+npm i @ckapp/math
 ```
 
 ## Building/Testing
