@@ -1,6 +1,8 @@
 import { addFactory } from './vector_base';
 import { Vector } from './vector';
 
+export type vec2 = [number, number];
+
 /**
  * Representation of 2-dimensional vectors and points
  */
@@ -37,6 +39,16 @@ export class Vector2 extends Vector {
   }
   public set y(value: number) {
     this._components[1] = value;
+  }
+
+  /**
+   * The vector components
+   */
+  public get components(): vec2 {
+    return this._components as vec2;
+  }
+  public set components(value: vec2) {
+    this._components = value;
   }
 
   public toString() {
