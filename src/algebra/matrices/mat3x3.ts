@@ -7,6 +7,15 @@ type mat3x3 = [
   number, number, number,
 ];
 
+/**
+ * Creates a translation matrix from the given `vector`
+ *
+ * @param vector
+ * 2 dimensional vector describing the translation
+ *
+ * @returns
+ * A translation matrix
+ */
 export function translation([x, y]: vec2): mat3x3 {
   // prettier-ignore
   return [
@@ -16,9 +25,19 @@ export function translation([x, y]: vec2): mat3x3 {
   ];
 }
 
+/**
+ * Creates a rotation matrix with a rotation defined by `radians`.
+ *
+ * @param radians
+ * The angle in radians that the rotation should represents
+ *
+ * @returns
+ * A rotation matrix
+ */
 export function rotation(radians: number): mat3x3 {
   const c = Math.cos(radians);
   const s = Math.sin(radians);
+
   // prettier-ignore
   return [
     c,-s, 0,
@@ -27,6 +46,15 @@ export function rotation(radians: number): mat3x3 {
   ];
 }
 
+/**
+ * Creates a scaling matrix from the given `vector`
+ *
+ * @param vector
+ * Vector that describes the scaling in `x` and `y` direction
+ *
+ * @returns
+ * A scaling matrix
+ */
 export function scaling([x, y]: vec2): mat3x3 {
   // prettier-ignore
   return [
@@ -36,6 +64,15 @@ export function scaling([x, y]: vec2): mat3x3 {
   ];
 }
 
+/**
+ * Multiplies matrix `a` with matrix `b`
+ *
+ * @param a The first matrix
+ * @param b The second matrix
+ *
+ * @returns
+ * The result of the matrix multiplication
+ */
 export function multiply(a: mat3x3, b: mat3x3): mat3x3 {
   const a00 = a[0 * 3 + 0];
   const a01 = a[0 * 3 + 1];
