@@ -1,11 +1,43 @@
 import { vec2 } from '../vector2';
 
+// --------------------------------------------------------
+// Types
+// --------------------------------------------------------
+
 // prettier-ignore
 type mat3x3 = [
   number, number, number,
   number, number, number,
   number, number, number,
 ];
+
+// --------------------------------------------------------
+// Constants
+// --------------------------------------------------------
+
+/**
+ * 3x3 identity matrix
+ */
+// prettier-ignore
+export const identity = Object.freeze<mat3x3>([
+  1, 0, 0,
+  0, 1, 0,
+  0, 0, 1
+]);
+
+/**
+ * 3x3 identity matrix
+ */
+// prettier-ignore
+export const zero = Object.freeze<mat3x3>([
+  0, 0, 0,
+  0, 0, 0,
+  0, 0, 0
+]);
+
+// --------------------------------------------------------
+// Functions
+// --------------------------------------------------------
 
 /**
  * Creates a translation matrix from the given `vector`
