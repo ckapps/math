@@ -5,11 +5,13 @@ import { vec2 } from '../vector2';
 // --------------------------------------------------------
 
 // prettier-ignore
-type mat3x3 = [
+export type mat3x3 = [
   number, number, number,
   number, number, number,
   number, number, number,
 ];
+
+type mat3x3r = Readonly<mat3x3>;
 
 // --------------------------------------------------------
 // Constants
@@ -105,7 +107,7 @@ export function scaling([x, y]: vec2): mat3x3 {
  * @returns
  * The result of the matrix multiplication
  */
-export function multiply(a: mat3x3, b: mat3x3): mat3x3 {
+export function multiply(a: mat3x3r, b: mat3x3r): mat3x3 {
   const a00 = a[0 * 3 + 0];
   const a01 = a[0 * 3 + 1];
   const a02 = a[0 * 3 + 2];
