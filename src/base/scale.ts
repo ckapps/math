@@ -8,6 +8,6 @@
  * // a = 4, b = 6
  * const [a, b] = scale([2, 3], 2);
  */
-export function scale(values: number[], scalar: number) {
+export function scale(values: readonly number[], scalar: number) {
   return values.map(v => v * scalar);
 }
