@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/ckapps/math/compare/v0.0.5...v0.0.6) (2020-10-11)
+
+
+### Features
+
+* add 3x3 matrices and operations ([3e4679e](https://github.com/ckapps/math/commit/3e4679e4911edf77a70f7a50627cdcfc19819a5e))
+* add functional style array operations that work on array of arrays ([429c4de](https://github.com/ckapps/math/commit/429c4dee8e436eba8a316d214c5792911a37a5ca))
+* add identity and zero matrices ([4e31f89](https://github.com/ckapps/math/commit/4e31f899a16a6c535169f76946966155f6783d3b))
+* functional style implementation of base functions ([b6a4258](https://github.com/ckapps/math/commit/b6a425829e0945ac60604678d914fa0e3b55421a))
+* rework vector implementation ([806b595](https://github.com/ckapps/math/commit/806b595bc30c2834a0688a00be72f9a4dc4aabfa))
+
+
+### Bug Fixes
+
+* add readonly modifier ([2e4691d](https://github.com/ckapps/math/commit/2e4691dc2696f98e436b52a34d856194dda42105))
+
 ### [0.0.5](https://github.com/ckapps/math/compare/v0.0.4...v0.0.5) (2020-09-20)
 
 ### [0.0.4](https://github.com/ckapps/math/compare/v0.0.3...v0.0.4) (2020-09-17)
