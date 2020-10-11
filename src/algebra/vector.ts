@@ -1,250 +1,166 @@
-import { scale, subtract, sum } from '../base';
-import { create } from './vector_base';
+import { scale as _scale } from '../base';
+
+import { map, every } from '../functional/array';
+import {
+  sum as sumFn,
+  subtract as subtractFn,
+  multiply as multiplyFn,
+  min as minFn,
+  max as maxFn,
+} from '../functional/base';
+
+// --------------------------------------------------------
+// Types
+// --------------------------------------------------------
+type vectorN = number[];
+type vectorNr = Readonly<vectorN>;
+
+// --------------------------------------------------------
+// Functions
+// --------------------------------------------------------
+/**
+ * Length of this vector.
+ * The length of the vector is square root of its components
+ * `(x * x + y * y + z * z + ...)`.
+ *
+ * If comparing vector magnitudes is enough, please consider `sqrtMagnitude`
+ *
+ * @param vector The vector
+ *
+ * @returns
+ * The length of `vector`
+ */
+export function magnitude(vector: vectorNr): number {
+  return Math.sqrt(sqrtMagnitude(vector));
+}
 
 /**
- * Representation of n-dimensional vectors and points
+ * @param vector The vector
+ *
+ * @returns
+ * Length of `vector`, squared.
  */
-export class Vector {
-  protected _components: number[];
+export function sqrtMagnitude(vector: vectorNr) {
+  return dot(vector, vector);
+}
 
-  /**
-   * Creates a new vector
-   *
-   * @param components The vector components
-   */
-  constructor(...components: number[]) {
-    this._components = components;
-  }
+/**
+ * Vector in its normalized form, meaning that the `magnitude`
+ * of the result vector is `1`, but the orientation is preserved.
+ *
+ * @param vector The vector to normalize
+ *
+ * @returns
+ * A vector with the same orientation as `vector` with a
+ * `magnitude` of 1.
+ */
+export function normalized(vector: vectorNr) {
+  return divide(vector, magnitude(vector));
+}
 
-  /**
-   * The vector components
-   */
-  public get components() {
-    return this._components;
-  }
-  public set components(value: number[]) {
-    this._components = value;
-  }
+/**
+ * Scales all components of the vector by the given `scalar`.
+ *
+ * @param v The vector to scale
+ * @param scalar The scalar used for scaling
+ *
+ * @returns
+ * A new vector with each component scaled by `scalar`.
+ */
+export function scale(v: vectorNr, scalar: number): vectorN {
+  return _scale(v, scalar);
+}
 
-  /**
-   * Length of this vector.
-   * The length of the vector is square root of its components
-   * `(x * x + y * y + z * z + ...)`.
-   *
-   * If comparing vector magnitudes is enough, please consider `sqrtMagnitude`
-   */
-  public get magnitude() {
-    return Math.sqrt(this.sqrtMagnitude);
-  }
+/**
+ * Divides all components of the vector by the given `scalar`.
+ *
+ * @param scalar The scalar used for dividing
+ *
+ * @returns
+ * A new vector with each component inverse scaled by `scalar`.
+ */
+export function divide(v: vectorNr, scalar: number): vectorN {
+  return scale(v, 1 / scalar);
+}
 
-  /**
-   * Length of this vector, squared.
-   */
-  public get sqrtMagnitude() {
-    return Vector.dot(this, this);
-  }
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
+ * The dot product of `a` and `b`.
+ */
+export function dot(a: vectorNr, b: vectorNr): number {
+  return sumFn(map(multiplyFn)([a, b]));
+}
 
-  /**
-   * Vector in its normalized form, meaning that the `magnitude`
-   * of the result vector is `1`, but the orientation is preserved.
-   */
-  public get normalized() {
-    return Vector.divide(this, this.magnitude);
-  }
+/**
+ * @param a Point `a`
+ * @param b Point `b`
+ *
+ * @returns
+ * The distance between `a` and `b`.
+ */
+export function distance(a: vectorNr, b: vectorNr): number {
+  return magnitude(subtract(a, b));
+}
 
-  public toString() {
-    return `Vector: ${this.components.join(',')}`;
-  }
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
+ * `true`, if the components of vector `a` and `b` match.
+ * Otherwise `false`.
+ */
+export function equals(a: vectorNr, b: vectorNr): boolean {
+  return every((numbers: number[]) => numbers[0] === numbers[1])([a, b]);
+}
 
-  // ============================================
-  // static implementations
-  // ============================================
-  /**
-   * Sums all values of the same vector component.
-   *
-   * @param others Array of vectors to add
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public static add<T extends Vector>(...others: T[]): T {
-    return create<T>(Vector.map(others, (_, numbers) => sum(...numbers)));
-  }
+/**
+ * @param vectors Array of vectors
+ *
+ * @returns
+ * A vector with the minimum value for each component from all
+ * components of all given `vectors`.
+ */
+export function min(...vectors: vectorNr[]): vectorN {
+  return map(minFn)(vectors);
+}
 
-  /**
-   * Subtracts all values of the same vector component.
-   *
-   * @param vectors Vectors
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public static subtract<T extends Vector>(...vectors: T[]): T {
-    return create<T>(Vector.map(vectors, (_, numbers) => subtract(...numbers)));
-  }
+/**
+ * @param vectors Array of vectors
+ *
+ * @returns
+ * A vector with the maximum value for each component from all
+ * components of all given `vectors`.
+ */
+export function max(...vectors: vectorNr[]): vectorN {
+  return map(maxFn)(vectors);
+}
 
-  /**
-   * Scales all components of the vector by the given `scalar`.
-   *
-   * @param v The vector to scale
-   * @param scalar The scalar used for scaling
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public static scale<T extends Vector>(v: T, scalar: number) {
-    return create<T>(scale(v._components, scalar));
-  }
+/**
+ * Sums all values of the same vector component.
+ *
+ * @param vectors Array of vectors to add
+ *
+ * @returns
+ * A vector where the value of a component is the sum of the same
+ * component of all given `vectors`.
+ */
+export function add(...vectors: vectorNr[]): vectorN {
+  return map(sumFn)(vectors);
+}
 
-  /**
-   * Divides all components of the vector by the given `scalar`.
-   *
-   * @param scalar The scalar used for dividing
-   *
-   * @returns
-   * A new instance of `Vector`
-   */
-  public static divide<T extends Vector>(v: T, scalar: number) {
-    return Vector.scale(v, 1 / scalar);
-  }
-
-  /**
-   * @param vectors Array of vectors
-   *
-   * @returns
-   * A new instance of vector with the minimum values for each component
-   */
-  public static min<T extends Vector>(...vectors: T[]) {
-    return create<T>(Vector.map(vectors, (_, n) => Math.min(...n)));
-  }
-
-  /**
-   * @param vectors Array of vectors
-   *
-   * @returns
-   * A new instance of vector with the maximum values for each component
-   */
-  public static max<T extends Vector>(...vectors: T[]) {
-    return create<T>(Vector.map(vectors, (_, n) => Math.max(...n)));
-  }
-
-  /**
-   * @param a First vector
-   * @param b First vector
-   *
-   * @returns
-   * The dot product of `this` and `other`
-   */
-  public static dot<T extends Vector>(a: T, b: T) {
-    return Vector.map([a, b], (_, n) =>
-      n.reduce((acc, cur) => acc * cur),
-    ).reduce((acc, cur) => acc + cur);
-  }
-
-  /**
-   * @param a Point a
-   * @param b Point b
-   *
-   * @returns
-   * The distance between `a` and `b`.
-   */
-  public static distance<T extends Vector>(a: T, b: T) {
-    return Vector.subtract(a, b).magnitude;
-  }
-
-  /**
-   * @param a First vector
-   * @param b Second vector
-   *
-   * @returns
-   * `true`, if the components of vector `a` and `b` match.
-   * Otherwise `false`.
-   */
-  public static equals(a: Vector, b: Vector) {
-    return Vector.every([a, b], (_, numbers) => numbers[0] === numbers[1]);
-  }
-
-  /**
-   * For each per vector component with the ability to abort by return `false` from `fn`.
-   *
-   * @param vectors Vectors on which `fn` should be executed
-   * @param fn Callback
-   */
-  protected static forEachAbort(
-    vectors: Vector[],
-    fn: (index: number, numbers: number[]) => boolean,
-  ) {
-    const length = Math.max(...vectors.map(v => v._components.length));
-
-    for (let i = 0; i < length; ++i) {
-      const result = fn(
-        i,
-        vectors.map(v => v._components[i]),
-      );
-
-      if (result === false) {
-        return;
-      }
-    }
-  }
-
-  /**
-   * For each per vector component
-   *
-   * @param vectors Vectors on which `fn` should be executed
-   * @param fn Callback
-   */
-  protected static forEach(
-    vectors: Vector[],
-    fn: (index: number, numbers: number[]) => void,
-  ) {
-    Vector.forEachAbort(vectors, (_, numbers) => {
-      fn(_, numbers);
-      return true; // Don't abort
-    });
-  }
-
-  /**
-   * @param vectors Vectors on which `fn` is executed
-   * @param fn Callback
-   *
-   * @returns
-   * `true`, if `fn` didn't return a falsy value.
-   */
-  protected static every(
-    vectors: Vector[],
-    fn: (index: number, numbers: number[]) => boolean,
-  ): boolean {
-    let fulfilled = true;
-
-    Vector.forEachAbort(vectors, (_, numbers) => {
-      const match = fn(_, numbers);
-      if (!match) {
-        fulfilled = false;
-      }
-      return fulfilled;
-    });
-
-    return fulfilled;
-  }
-
-  /**
-   * Applies a projection function on every vector component
-   * of the given `vectors`.
-   *
-   * @param vectors Vectors on which the `projection` is applied
-   * @param project Projection function
-   */
-  protected static map<T>(
-    vectors: Vector[],
-    project: (index: number, numbers: number[]) => T,
-  ): T[] {
-    const components: T[] = [];
-
-    Vector.forEach(vectors, (_, numbers) =>
-      components.push(project(_, numbers)),
-    );
-
-    return components;
-  }
+/**
+ * Subtracts all values of the same vector component.
+ *
+ * @param vectors Array of vectors to add
+ *
+ * @returns
+ * A vector where the value of a component is the difference of the same
+ * component of all given `vectors`.
+ */
+export function subtract(...vectors: vectorNr[]): vectorN {
+  return map(subtractFn)(vectors);
 }

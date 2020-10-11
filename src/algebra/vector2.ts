@@ -1,138 +1,175 @@
-import { addFactory } from './vector_base';
-import { Vector } from './vector';
+/**
+ * Export the real functions from vector
+ */
+export * from './vector';
 
+// --------------------------------------------------------
+// Types
+// --------------------------------------------------------
+/**
+ * Represents a 2 dimensional vector
+ */
 export type vec2 = [number, number];
+/**
+ * readonly vec2
+ */
+type vec2r = Readonly<vec2>;
+
+// --------------------------------------------------------
+// Constants
+// --------------------------------------------------------
+/**
+ * 2D vector (0, 0)
+ */
+export const zero = Object.freeze<vec2>([0, 0]);
 
 /**
- * Representation of 2-dimensional vectors and points
+ * 2D vector (1, 1)
  */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export class Vector2 extends Vector {
-  /**
-   * Type guard to prevent mixing Vectors of
-   * different dimensions
-   */
-  private __vector2__ = true;
-
-  /**
-   * Creates a new two dimensional vector
-   *
-   * @param x The x component
-   * @param y The y component
-   */
-  constructor(x: number, y: number) {
-    super(x, y);
-  }
-
-  /** The x component */
-  public get x() {
-    return this._components[0];
-  }
-  public set x(value: number) {
-    this._components[0] = value;
-  }
-
-  /** The y component */
-  public get y() {
-    return this._components[1];
-  }
-  public set y(value: number) {
-    this._components[1] = value;
-  }
-
-  /**
-   * The vector components
-   */
-  public get components(): vec2 {
-    return this._components as vec2;
-  }
-  public set components(value: vec2) {
-    this._components = value;
-  }
-
-  public toString() {
-    return `Vector2[${this.components.join(',')}]`;
-  }
-  // ============================================
-  // Static
-  // ============================================
-  /**
-   * Vector2(0, 0).
-   */
-  public static get zero() {
-    return new Vector2(0, 0);
-  }
-  /**
-   * Vector2(1, 1).
-   */
-  public static get one() {
-    return new Vector2(1, 1);
-  }
-  /**
-   * Vector2(0, 1).
-   */
-  public static get up() {
-    return new Vector2(0, 1);
-  }
-  /**
-   * Vector2(0, -1).
-   */
-  public static get down() {
-    return new Vector2(0, -1);
-  }
-  /**
-   * Vector2(-1, 0).
-   */
-  public static get left() {
-    return new Vector2(-1, 0);
-  }
-  /**
-   * Vector2(1, 0).
-   */
-  public static get right() {
-    return new Vector2(1, 0);
-  }
-
-  // ============================================
-  // Override for type safety
-  // ============================================
-  public static add(...others: Vector2[]) {
-    return Vector.add(...others);
-  }
-
-  public static subtract(...others: Vector2[]) {
-    return Vector.subtract(...others);
-  }
-
-  public static scale(v: Vector2, scalar: number) {
-    return Vector.scale(v, scalar);
-  }
-
-  public static divide(v: Vector2, scalar: number) {
-    return Vector.divide(v, scalar);
-  }
-
-  public static dot(a: Vector2, b: Vector2) {
-    return Vector.dot(a, b);
-  }
-
-  public static distance(a: Vector2, b: Vector2) {
-    return Vector.distance(a, b);
-  }
-
-  public static min(...others: Vector2[]): Vector2 {
-    return Vector.min(...others);
-  }
-
-  public static max(...others: Vector2[]): Vector2 {
-    return Vector.max(...others);
-  }
-}
+export const one = Object.freeze<vec2>([1, 1]);
 
 /**
- * Let the vector know, that there is a
- * specific factory for creating a 2 dimensional
- * vector
+ * 2D vector (0, 1)
  */
-addFactory(2, Vector2);
+export const up = Object.freeze<vec2>([0, 1]);
+
+/**
+ * 2D vector (0, -1)
+ */
+export const down = Object.freeze<vec2>([0, -1]);
+
+/**
+ * 2D vector (1, 0)
+ */
+export const right = Object.freeze<vec2>([1, 0]);
+
+/**
+ * 2D vector (-1, 0)
+ */
+export const left = Object.freeze<vec2>([-1, 0]);
+
+// --------------------------------------------------------
+// Declarations
+// --------------------------------------------------------
+/**
+ * Length of this vector.
+ * The length of the vector is square root of its components
+ * `(x * x + y * y)`.
+ *
+ * If comparing vector magnitudes is enough, please consider `sqrtMagnitude`
+ *
+ * @param vector The vector
+ *
+ * @returns
+ * The length of `vector`
+ */
+export declare function magnitude(vector: vec2r): number;
+
+/**
+ * @param vector The vector
+ *
+ * @returns
+ * Length of `vector`, squared.
+ */
+export declare function sqrtMagnitude(vector: vec2r): number;
+
+/**
+ * Vector in its normalized form, meaning that the `magnitude`
+ * of the result vector is `1`, but the orientation is preserved.
+ *
+ * @param vector The vector to normalize
+ *
+ * @returns
+ * A vector with the same orientation as `vector` with a
+ * `magnitude` of 1.
+ */
+export declare function normalized(vector: vec2r): vec2;
+
+/**
+ * Scales all components of the vector by the given `scalar`.
+ *
+ * @param v The vector to scale
+ * @param scalar The scalar used for scaling
+ *
+ * @returns
+ * A new vector with each component scaled by `scalar`.
+ */
+export declare function scale(v: vec2r, scalar: number): vec2;
+
+/**
+ * Divides all components of the vector by the given `scalar`.
+ *
+ * @param scalar The scalar used for dividing
+ *
+ * @returns
+ * A new vector with each component inverse scaled by `scalar`.
+ */
+export declare function divide(v: vec2r, scalar: number): vec2;
+
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
+ * The dot product of `a` and `b`.
+ */
+export declare function dot(a: vec2r, b: vec2r): number;
+
+/**
+ * @param a Point `a`
+ * @param b Point `b`
+ *
+ * @returns
+ * The distance between `a` and `b`.
+ */
+export declare function distance(a: vec2r, b: vec2r): number;
+
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
+ * `true`, if the components of vector `a` and `b` match.
+ * Otherwise `false`.
+ */
+export declare function equals(a: vec2r, b: vec2r): boolean;
+
+/**
+ * @param vectors Array of vectors
+ *
+ * @returns
+ * A vector with the minimum value for each component from all
+ * components of all given `vectors`.
+ */
+export declare function min(...vectors: vec2r[]): vec2;
+
+/**
+ * @param vectors Array of vectors
+ *
+ * @returns
+ * A vector with the maximum value for each component from all
+ * components of all given `vectors`.
+ */
+export declare function max(...vectors: vec2r[]): vec2;
+
+/**
+ * Sums all values of the same vector component.
+ *
+ * @param vectors Array of vectors to add
+ *
+ * @returns
+ * A vector where the value of a component is the sum of the same
+ * component of all given `vectors`.
+ */
+export declare function add(...vectors: vec2r[]): vec2;
+
+/**
+ * Subtracts all values of the same vector component.
+ *
+ * @param vectors Array of vectors to add
+ *
+ * @returns
+ * A vector where the value of a component is the difference of the same
+ * component of all given `vectors`.
+ */
+export declare function subtract(...vectors: vec2r[]): vec2;
