@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/ckapps/math/compare/v0.0.7...v0.0.8) (2020-10-12)
+
+
+### Features
+
+* add quaternion implementation ([f6ea4b9](https://github.com/ckapps/math/commit/f6ea4b9a985f0adc1a2db857d5e9217e6baf9ff0)), closes [#35](https://github.com/ckapps/math/issues/35)
+* add trigonometric functional style functions ([52db55e](https://github.com/ckapps/math/commit/52db55ee0dd05ce2c0d0aa89b13c38845fcd5cb8))
+
+
+### Bug Fixes
+
+* removed default initialization ([f583204](https://github.com/ckapps/math/commit/f583204027acb17fcea7bf7df7cedf4e76db4cd9))
+* rename fromOmegaVector fn ([b617744](https://github.com/ckapps/math/commit/b61774497e56de74183da8fd6a8765328a8f3547))
+* reorganize quaternion module ([fb565ca](https://github.com/ckapps/math/commit/fb565ca492a800fc9a3a0fc2a1b02f2369a89dd8))
+
 ### [0.0.7](https://github.com/ckapps/math/compare/v0.0.6...v0.0.7) (2020-10-12)
 
 
