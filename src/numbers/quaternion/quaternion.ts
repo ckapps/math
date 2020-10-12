@@ -23,10 +23,10 @@ type vec3 = vector3.vec3;
  * whereas `x i + y j + z k` is considered the 'imaginary part' or 'vector part'.
  */
 export class Quaternion {
-  w = 0;
-  x = 0;
-  y = 0;
-  z = 0;
+  w: number;
+  x: number;
+  y: number;
+  z: number;
 
   constructor(w: number, x: number, y: number, z: number) {
     this.w = w;
