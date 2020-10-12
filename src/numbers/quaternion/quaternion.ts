@@ -71,7 +71,7 @@ export function fromEulerZXY(rotation: vec3) {
  * @returns
  * A new quaternion from the given `w` and `xyz`.
  */
-export function fromOmegaVector(w: number, xyz: vec3) {
+export function fromOmegaVec3(w: number, xyz: vec3) {
   const [x, y, z] = xyz;
 
   return new Quaternion(w, x, y, z);
@@ -89,7 +89,7 @@ export function fromOmegaVector(w: number, xyz: vec3) {
 export function fromAxisAngle(axis: vec3, angle: number) {
   const ha = angle / 2;
 
-  return fromOmegaVector(Math.cos(ha), vector3.scale(axis, Math.sin(ha)));
+  return fromOmegaVec3(Math.cos(ha), vector3.scale(axis, Math.sin(ha)));
 }
 
 // --------------------------------------------------------

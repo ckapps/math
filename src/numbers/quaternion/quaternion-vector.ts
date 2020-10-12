@@ -6,13 +6,7 @@ import { vec3, scale as scaleV3 } from '../../algebra/vector3';
 import { chain } from '../../functional/base';
 import { multiplyWith } from '../../functional/numbers/quaternions/multiply-with';
 
-import {
-  conjugate,
-  fromOmegaVector,
-  Quaternion,
-  xyz,
-  wxyz,
-} from '../quaternion';
+import { conjugate, fromOmegaVec3, Quaternion, xyz, wxyz } from '../quaternion';
 
 /**
  * Rotates the given vector `v` by the quaternion `q`
@@ -21,7 +15,7 @@ import {
  * @param v A vector
  */
 export function rotateVec3(q: Readonly<Quaternion>, v: vec3): vec3 {
-  const V = fromOmegaVector(0, v);
+  const V = fromOmegaVec3(0, v);
 
   // prettier-ignore
   return chain(
