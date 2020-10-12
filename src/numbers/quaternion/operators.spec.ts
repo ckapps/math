@@ -1,7 +1,6 @@
 import * as q from './operators';
 
 import { Quaternion } from './quaternion';
-import * as v3 from '../../algebra/vector3';
 
 describe('algebra/quaternion/operators', () => {
   const mockQuaternion = { w: 0, x: 1, y: 2, z: 3 };
