@@ -1,12 +1,4 @@
-/**
- * This module holds the basis implementation for quaternions
- */
-
-import * as vector3 from '../../algebra/vector3';
-
-import { cos, sin } from '../../geometry/trigonometric';
-
-type vec3 = vector3.vec3;
+import { vec3 } from '../../algebra/vector3';
 
 // --------------------------------------------------------
 // Types
@@ -36,34 +28,6 @@ export class Quaternion {
   }
 }
 
-// --------------------------------------------------------
-// Creational
-// --------------------------------------------------------
-/**
- * @param rotation Vector describing the rotation
- *
- * @returns
- * A rotation that rotates
- *  1. z degrees around the z axis,
- *  2. x degrees around the x axis and
- *  3. y degrees around the y axis
- *
- * applied in that order.
- */
-export function fromEulerZXY(rotation: vec3) {
-  const radians = vector3.scale(rotation, 0.5);
-  const [cX, cY, cZ] = cos(radians);
-  const [sX, sY, sZ] = sin(radians);
-
-  // prettier-ignore
-  return new Quaternion(
-    cX * cY * cZ - sX * sY * sZ,
-    sX * cY * cZ - cX * sY * sZ,
-    cX * sY * cZ + sX * cY * sZ,
-    cX * cY * sZ + sX * sY * cZ,
-  );
-}
-
 /**
  * @param w Real part
  * @param xyz Vector part
@@ -77,24 +41,6 @@ export function fromOmegaVec3(w: number, xyz: vec3) {
   return new Quaternion(w, x, y, z);
 }
 
-/**
- * Creates a quaternion from a normalized axis-angle pair rotation
- *
- * @param axis The axis
- * @param angle The angle
- *
- * @returns
- * A quaternion
- */
-export function fromAxisAngle(axis: vec3, angle: number) {
-  const ha = angle / 2;
-
-  return fromOmegaVec3(Math.cos(ha), vector3.scale(axis, Math.sin(ha)));
-}
-
-// --------------------------------------------------------
-// Other
-// --------------------------------------------------------
 /**
  * @param q A quaternion
  *

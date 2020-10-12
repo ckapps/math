@@ -19,16 +19,6 @@ describe('algebra/quaternion', () => {
       expect(r.z).toBe(z);
     });
 
-    it('fromEulerZXY', () => {
-      const r = q.fromEulerZXY([0, 0, 0]);
-
-      expect(r).toBeDefined();
-      expect(r.w).toBe(1);
-      expect(r.x).toBe(0);
-      expect(r.y).toBe(0);
-      expect(r.z).toBe(0);
-    });
-
     it('fromOmegaVec3', () => {
       const w = 1;
       const v: vec3 = [0, 0, 0];
@@ -39,21 +29,6 @@ describe('algebra/quaternion', () => {
       expect(r.x).toBe(v[0]);
       expect(r.y).toBe(v[1]);
       expect(r.z).toBe(v[2]);
-    });
-
-    it('fromAxisAngle', () => {
-      const sinSpy = jest.spyOn(Math, 'sin');
-      const cosSpy = jest.spyOn(Math, 'cos');
-      const vec3ScaleSpy = jest.spyOn(v3, 'scale');
-
-      const angle = Math.PI;
-      const v: vec3 = [1, 0, 0];
-      const r = q.fromAxisAngle(v, angle);
-
-      expect(r).toBeDefined();
-      expect(cosSpy).toBeCalledWith(angle / 2);
-      expect(sinSpy).toBeCalledWith(angle / 2);
-      expect(vec3ScaleSpy).toBeCalledWith(v, expect.anything());
     });
   });
 
