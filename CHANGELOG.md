@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/ckapps/math/compare/v0.0.6...v0.0.7) (2020-10-12)
+
+
+### Features
+
+* add heaviside function ([da1ab04](https://github.com/ckapps/math/commit/da1ab04611c2a87d28026c92f32b4f0e09437e4e))
+
 ### [0.0.6](https://github.com/ckapps/math/compare/v0.0.5...v0.0.6) (2020-10-11)
 
 
