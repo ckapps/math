@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/ckapps/math/compare/v0.0.9...v0.0.10) (2020-10-13)
+
+
+### Features
+
+* add divide ([2bbe2c4](https://github.com/ckapps/math/commit/2bbe2c45d1826864934744a67cb82dc3c0c72660))
+* add expand for functional chaining flow ([a2cd913](https://github.com/ckapps/math/commit/a2cd91386377babf8119ad1aec50f7cdb93a19dd))
+* add exponential function ([501a7fc](https://github.com/ckapps/math/commit/501a7fc45a7a5c66bf45a28c07143bb92cce2c2c))
+* add factorial ([e5c21a1](https://github.com/ckapps/math/commit/e5c21a1dec59a2fd4a5f5792c61fa7545d73dcf1))
+* add fn for dividing ([13e4f69](https://github.com/ckapps/math/commit/13e4f692329743ff83024a04a099d0afffa414e4))
+* add functions for pow and nth root ([9d664d6](https://github.com/ckapps/math/commit/9d664d6c7aada2f5ef40cd1753e07ca241f75c68))
+* add linear functional style ([fad510f](https://github.com/ckapps/math/commit/fad510f0b5d0463e653b9eb37218b342ce9ef113))
+* add rational function ([26c8c92](https://github.com/ckapps/math/commit/26c8c92fa6493343b92697628f78006b2126b91b))
+
+
+### Bug Fixes
+
+* move chain to functional flow functions ([d8c2154](https://github.com/ckapps/math/commit/d8c2154c3ae32309595d4c8b4a43c1657aa7765a))
+* renamed file to polynomial ([7076871](https://github.com/ckapps/math/commit/7076871e71b748e26f15300385aae3b01c72c137))
+* renamed functional module to fn ([cfdad24](https://github.com/ckapps/math/commit/cfdad24f1ec9085aced189edd8aa019f7d9f51a6))
+
 ### [0.0.9](https://github.com/ckapps/math/compare/v0.0.8...v0.0.9) (2020-10-12)
 
 ### [0.0.8](https://github.com/ckapps/math/compare/v0.0.7...v0.0.8) (2020-10-12)
