@@ -6,7 +6,7 @@ export * from './max';
 export * from './min';
 export * from './multiply';
 export * from './nth-root';
-export * from './polynom';
+export * from './polynomial';
 export * from './pow';
 export * from './rational';
 export * from './scale';

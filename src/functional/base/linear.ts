@@ -1,5 +1,5 @@
 import { MonoOperatorFunction } from '../types/operator-function';
-import { polynomial } from './polynom';
+import { polynomial } from './polynomial';
 
 /**
  * Creates a linear function `f(x) = ax + b`

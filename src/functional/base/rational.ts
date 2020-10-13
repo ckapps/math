@@ -1,6 +1,6 @@
 import { chain, expand } from '../flow';
 import { divide } from './divide';
-import { polynomial } from './polynom';
+import { polynomial } from './polynomial';
 
 /**
  * Creates a function that is represented as the quotient
