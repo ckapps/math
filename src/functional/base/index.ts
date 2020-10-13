@@ -8,6 +8,7 @@ export * from './multiply';
 export * from './nth-root';
 export * from './polynom';
 export * from './pow';
+export * from './rational';
 export * from './scale';
 export * from './scaleBy';
 export * from './subtract';
