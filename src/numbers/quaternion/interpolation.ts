@@ -1,6 +1,6 @@
 import { clamp } from '../../base';
-import { chain } from '../../functional';
-import { clamp as clampFn } from '../../functional/base';
+import { chain } from '../../fn';
+import { clamp as clampFn } from '../../fn/base';
 
 import { Quaternion } from './quaternion';
 import { add, scale, normalize, dot, divideBy, invertSign } from './operators';

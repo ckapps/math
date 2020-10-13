@@ -1,13 +1,13 @@
 import { scale as _scale } from '../base';
 
-import { map, every } from '../functional/array';
+import { map, every } from '../fn/array';
 import {
   sum as sumFn,
   subtract as subtractFn,
   multiply as multiplyFn,
   min as minFn,
   max as maxFn,
-} from '../functional/base';
+} from '../fn/base';
 
 // --------------------------------------------------------
 // Types
