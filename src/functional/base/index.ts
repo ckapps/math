@@ -1,6 +1,7 @@
 export * from './chain';
 export * from './clamp';
 export * from './divide';
+export * from './exponential';
 export * from './linear';
 export * from './max';
 export * from './min';
