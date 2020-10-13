@@ -1,6 +1,6 @@
 import { vec3 } from '../../algebra/vector3';
-import { chain } from '../../functional/base';
-import { multiplyWith } from '../../functional/numbers/quaternions/multiply-with';
+import { chain } from '../../fn';
+import { multiplyWith } from '../../fn/numbers/quaternions/multiply-with';
 
 import { conjugate, fromOmegaVec3, Quaternion, xyz } from '../quaternion';
 

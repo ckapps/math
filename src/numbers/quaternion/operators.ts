@@ -1,5 +1,5 @@
 import { sum } from '../../base';
-import { chain } from '../../functional/base';
+import { chain } from '../../fn';
 
 import { Quaternion, wxyz } from './quaternion';
 
