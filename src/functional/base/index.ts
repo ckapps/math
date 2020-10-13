@@ -1,5 +1,6 @@
 export * from './chain';
 export * from './clamp';
+export * from './divide';
 export * from './max';
 export * from './min';
 export * from './multiply';
