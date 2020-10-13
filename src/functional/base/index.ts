@@ -1,4 +1,3 @@
-export * from './chain';
 export * from './clamp';
 export * from './divide';
 export * from './exponential';
