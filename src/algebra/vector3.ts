@@ -141,6 +141,9 @@ export declare function scale(v: vec3r, scalar: number): vec3;
 export declare function divide(v: vec3r, scalar: number): vec3;
 
 /**
+ * The dot product is defined as `|a| |b| cos(phi)`.
+ * This method is only applicable for cartesian coordinates.
+ *
  * @param a Vector `a`
  * @param b Vector `b`
  *

@@ -5,7 +5,7 @@ import { vectorNr } from './vector.types';
 
 /**
  * The dot product is defined as `|a| |b| cos(phi)`.
- * This method is only applicable for cartesian coordinates
+ * This method is only applicable for cartesian coordinates.
  *
  * @param a Vector `a`
  * @param b Vector `b`
