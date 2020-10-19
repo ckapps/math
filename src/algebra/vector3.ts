@@ -141,6 +141,9 @@ export declare function scale(v: vec3r, scalar: number): vec3;
 export declare function divide(v: vec3r, scalar: number): vec3;
 
 /**
+ * The dot product is defined as `|a| |b| cos(phi)`.
+ * This method is only applicable for cartesian coordinates.
+ *
  * @param a Vector `a`
  * @param b Vector `b`
  *
@@ -157,6 +160,15 @@ export declare function dot(a: vec3r, b: vec3r): number;
  * The distance between `a` and `b`.
  */
 export declare function distance(a: vec3r, b: vec3r): number;
+
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
+ * The angle between vectors `a` and `b`.
+ */
+export declare function angle(a: vec3r, b: vec3r): number;
 
 /**
  * @param a Vector `a`
