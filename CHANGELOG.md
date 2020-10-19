@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/ckapps/math/compare/v0.0.10...v0.0.11) (2020-10-19)
+
+
+### Features
+
+* add angle function to get angle between vectors ([de370fa](https://github.com/ckapps/math/commit/de370facb1a9d7a27b4d2b3194e255aeae6b49dd))
+
 ### [0.0.10](https://github.com/ckapps/math/compare/v0.0.9...v0.0.10) (2020-10-13)
 
 
