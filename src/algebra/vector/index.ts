@@ -1,4 +1,5 @@
 export * from './add';
+export * from './angle';
 export * from './distance';
 export * from './divide';
 export * from './dot';

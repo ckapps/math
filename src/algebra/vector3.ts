@@ -163,6 +163,15 @@ export declare function distance(a: vec3r, b: vec3r): number;
  * @param b Vector `b`
  *
  * @returns
+ * The angle between vectors `a` and `b`.
+ */
+export declare function angle(a: vec3r, b: vec3r): number;
+
+/**
+ * @param a Vector `a`
+ * @param b Vector `b`
+ *
+ * @returns
  * `true`, if the components of vector `a` and `b` match.
  * Otherwise `false`.
  */
