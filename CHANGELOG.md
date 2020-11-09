@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/ckapps/math/compare/v0.0.11...v0.0.12) (2020-11-09)
+
+
+### Features
+
+* **geometry:** add basic shapes/objects ([59d747a](https://github.com/ckapps/math/commit/59d747a3784ef7bccfb1403ceab1ba84127b1134))
+
 ### [0.0.11](https://github.com/ckapps/math/compare/v0.0.10...v0.0.11) (2020-10-19)
 
 

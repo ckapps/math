@@ -1,7 +1,7 @@
 {
   "name": "@ckapp/math",
   "description": "Package of math utilities for JS / TS",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "author": "Chris",
   "bugs": {
