@@ -10,5 +10,4 @@ export * from './max';
 export * from './min';
 export * from './normalized';
 export * from './scale';
-export * from './scale-by';
 export * from './subtract';
