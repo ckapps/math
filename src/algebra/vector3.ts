@@ -108,6 +108,14 @@ export declare function magnitude(vector: vec3r): number;
 export declare function sqrtMagnitude(vector: vec3r): number;
 
 /**
+ * @param v A vector
+ *
+ * @returns
+ * Vector with each component inverted of a given vector `v`.
+ */
+export declare function invert(v: vec3r): vec3;
+
+/**
  * Vector in its normalized form, meaning that the `magnitude`
  * of the result vector is `1`, but the orientation is preserved.
  *
