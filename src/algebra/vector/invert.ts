@@ -1,8 +1,9 @@
-import { scaleBy } from './scale-by';
+import { scaleBy } from './scale';
+import { vectorNr } from './vector.types';
 
 /**
  * @param v Vector that should be inverted
  * @returns
  * A vector with each component inverted
  */
-export const invert = scaleBy(-1);
+export const invert: <T extends vectorNr>(v: T) => T = scaleBy(-1);
