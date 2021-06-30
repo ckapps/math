@@ -97,6 +97,17 @@ export declare function normalized(vector: vec2r): vec2;
 export declare function scale(v: vec2r, scalar: number): vec2;
 
 /**
+ * Scales all components of the vector by the given `scalar`.
+ *
+ * @param scalar The scalar used for scaling
+ *
+ * @returns
+ * A function that takes a vector and returns a new vector
+ * with each component scaled by `scalar`.
+ */
+export declare function scaleBy(scalar: number): (v: vec2r) => vec2;
+
+/**
  * Divides all components of the vector by the given `scalar`.
  *
  * @param scalar The scalar used for dividing
