@@ -4,6 +4,7 @@ export * from './distance';
 export * from './divide';
 export * from './dot';
 export * from './equals';
+export * from './invert';
 export * from './magnitude';
 export * from './max';
 export * from './min';

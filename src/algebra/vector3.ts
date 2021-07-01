@@ -108,6 +108,14 @@ export declare function magnitude(vector: vec3r): number;
 export declare function sqrtMagnitude(vector: vec3r): number;
 
 /**
+ * @param v A vector
+ *
+ * @returns
+ * Vector with each component inverted of a given vector `v`.
+ */
+export declare function invert(v: vec3r): vec3;
+
+/**
  * Vector in its normalized form, meaning that the `magnitude`
  * of the result vector is `1`, but the orientation is preserved.
  *
@@ -129,6 +137,17 @@ export declare function normalized(vector: vec3r): vec3;
  * A new vector with each component scaled by `scalar`.
  */
 export declare function scale(v: vec3r, scalar: number): vec3;
+
+/**
+ * Scales all components of the vector by the given `scalar`.
+ *
+ * @param scalar The scalar used for scaling
+ *
+ * @returns
+ * A function that takes a vector and returns a new vector
+ * with each component scaled by `scalar`.
+ */
+export declare function scaleBy(scalar: number): (v: vec3r) => vec3;
 
 /**
  * Divides all components of the vector by the given `scalar`.

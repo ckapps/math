@@ -12,6 +12,9 @@ import { vectorN, vectorNr } from './vector.types';
  * A vector where the value of a component is the difference of the same
  * component of all given `vectors`.
  */
-export function subtract(...vectors: vectorNr[]): vectorN {
+export function subtract<T extends vectorNr>(...vectors: T[]): T;
+export function subtract(...vectors: vectorNr[]): vectorNr;
+
+export function subtract(...vectors: vectorNr[]): vectorNr {
   return map(_subtract)(vectors);
 }

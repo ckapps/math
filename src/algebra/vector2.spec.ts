@@ -5,9 +5,11 @@ describe('algebra/vector2', () => {
     //
     expect(typeof vector2.magnitude).toBe('function');
     expect(typeof vector2.sqrtMagnitude).toBe('function');
+    expect(typeof vector2.invert).toBe('function');
     expect(typeof vector2.normalized).toBe('function');
     //
     expect(typeof vector2.scale).toBe('function');
+    expect(typeof vector2.scaleBy).toBe('function');
     expect(typeof vector2.divide).toBe('function');
     //
     expect(typeof vector2.dot).toBe('function');
