@@ -61,5 +61,8 @@
     "LICENSE",
     "package.json",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "fp-ts": "^2.10.5"
+  }
 }
