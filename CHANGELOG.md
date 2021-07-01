@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/ckapps/math/compare/v0.0.15...v0.0.16) (2021-07-01)
+
+
+### Features
+
+* **plane:** add euclidean plane ([0b2b085](https://github.com/ckapps/math/commit/0b2b0859108474b0dde62ae40241f27ab2710252))
+* **vector:** add dotBy ([a8ff382](https://github.com/ckapps/math/commit/a8ff382be55e69fda82697c38a3adb813525ea63))
+* **vector:** add invert ([972cbf9](https://github.com/ckapps/math/commit/972cbf92de9fda370baa1683fdac40a0fb7977d2))
+* **vector:** add scaleBy ([de847b7](https://github.com/ckapps/math/commit/de847b747c8f5eb6fcf155b7ed9597a6566c2a7f))
+* **vector:** add scaleBy to scale ([2f45b3f](https://github.com/ckapps/math/commit/2f45b3fb53eca04ef09f50ff38f14b76be9d1750))
+
+
+### Bug Fixes
+
+* **vector:** improve typing for invert ([615b8fe](https://github.com/ckapps/math/commit/615b8fe83e34e755e798851fc5fd6641a9a26c3b))
+* **vector:** improve typing for subtract ([43329c1](https://github.com/ckapps/math/commit/43329c19dd59c3f3fc31981f3d68b43580c24834))
+* **vector:** typing for divide ([4d8fc1c](https://github.com/ckapps/math/commit/4d8fc1c368c49744dacab71c251254a4bfef87b1))
+
 ### [0.0.15](https://github.com/ckapps/math/compare/v0.0.14...v0.0.15) (2021-04-01)
 
 ### [0.0.14](https://github.com/ckapps/math/compare/v0.0.13...v0.0.14) (2021-01-08)
