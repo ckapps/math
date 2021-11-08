@@ -1,6 +1,6 @@
 import { linear } from './linear';
 
-describe('functional/scaleBy', () => {
+describe('functional/linear', () => {
   it('should return a function', () => {
     expect(typeof linear(0, 0)).toBe('function');
   });
