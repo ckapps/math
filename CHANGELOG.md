@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/ckapps/math/compare/v0.0.16...v0.0.17) (2021-11-08)
+
+
+### Features
+
+* **fn:** add mod operator ([23ff0e1](https://github.com/ckapps/math/commit/23ff0e1e3cb5d36007f0ea39d2b83443f57af641))
+* **fn:** add mod-wrap ([27913ec](https://github.com/ckapps/math/commit/27913ec7aa7c34d9fe96c82c6f5fa3c34878ad59))
+
 ### [0.0.16](https://github.com/ckapps/math/compare/v0.0.15...v0.0.16) (2021-07-01)
 
 
