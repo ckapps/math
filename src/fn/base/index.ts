@@ -5,6 +5,7 @@ export * from './linear';
 export * from './max';
 export * from './min';
 export * from './mod';
+export * from './mod-wrap';
 export * from './multiply';
 export * from './nth-root';
 export * from './polynomial';
