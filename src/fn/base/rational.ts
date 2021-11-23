@@ -1,4 +1,5 @@
-import { chain, expand } from '../flow';
+import { flow } from 'fp-ts/function';
+import { expand } from '../flow';
 import { divide } from './divide';
 import { polynomial } from './polynomial';
 
@@ -11,5 +12,10 @@ import { polynomial } from './polynomial';
  * @param qc Coefficients of `Q`
  */
 export function rational(pc: number[], qc: number[]) {
-  return chain(divide, expand(polynomial(pc), polynomial(qc)));
+  return flow(
+    // First
+    expand(polynomial(pc), polynomial(qc)),
+    // Then
+    divide,
+  );
 }

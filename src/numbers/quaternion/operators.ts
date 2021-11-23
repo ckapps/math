@@ -1,5 +1,5 @@
+import { flow } from 'fp-ts/function';
 import { sum } from '../../base';
-import { chain } from '../../fn';
 
 import { Quaternion, wxyz } from './quaternion';
 
@@ -23,9 +23,7 @@ export function conjugate(q: Readonly<Quaternion>) {
  * @returns
  * The magnitude of the given quaternion `q`
  */
-export function magnitude(q: Readonly<Quaternion>) {
-  return Math.sqrt(sqrtMagnitude(q));
-}
+export const magnitude = flow(sqrtMagnitude, Math.sqrt);
 
 /**
  * @param q A quaternion
@@ -53,10 +51,10 @@ export function normalize(q: Readonly<Quaternion>) {
  * @param q A quaternion
  */
 // prettier-ignore
-export const invert = chain(
-  c => divideBy(c, sqrtMagnitude(c)),
-  conjugate
-);
+export const invert = flow(
+  conjugate,
+  c => divideBy(c, sqrtMagnitude(c))
+)
 
 /**
  * Scales the real numbers from the quaternion `q` by the given `scalar`.
