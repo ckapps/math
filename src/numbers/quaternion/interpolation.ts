@@ -1,9 +1,18 @@
+import { flow } from 'fp-ts/function';
 import { clamp } from '../../base';
-import { chain } from '../../fn';
 import { clamp as clampFn } from '../../fn/base';
 
 import { Quaternion } from './quaternion';
 import { add, scale, normalize, dot, divideBy, invertSign } from './operators';
+
+function lerpBetween(a: Readonly<Quaternion>, b: Readonly<Quaternion>) {
+  return flow(
+    clampFn(0, 1),
+    (_t: number): [Quaternion, Quaternion] => [scale(a, 1 - _t), scale(b, _t)],
+    (q: [Quaternion, Quaternion]) => add(q[0], q[1]),
+    normalize,
+  );
+}
 
 /**
  * Linear interpolation between quaternions `a` and `b`.
@@ -18,12 +27,7 @@ export function lerp(
   b: Readonly<Quaternion>,
   t: number,
 ) {
-  return chain(
-    normalize,
-    (q: [Quaternion, Quaternion]) => add(q[0], q[1]),
-    (_t: number): [Quaternion, Quaternion] => [scale(a, 1 - _t), scale(b, _t)],
-    clampFn(),
-  )(t);
+  return lerpBetween(a, b)(t);
 }
 
 /**
