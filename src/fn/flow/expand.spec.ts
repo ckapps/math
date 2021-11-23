@@ -3,7 +3,7 @@ import { expand } from './expand';
 describe('functional/expand', () => {
   const mockResults = [1, 'test', ['array'], { key: 'value' }, new Map()];
 
-  const create = (results: any[]) => {
+  const create = (results: unknown[]) => {
     const mockFns = results.map(r => jest.fn().mockReturnValue(r));
 
     const fn = expand(...mockFns);
