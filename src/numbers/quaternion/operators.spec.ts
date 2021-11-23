@@ -97,5 +97,16 @@ describe('algebra/quaternion/operators', () => {
 
       compare(r, [1, 0, 0, 0]);
     });
+
+    it('dot', () => {
+      const r = q.dot(mockQuaternion, mockQuaternion);
+      const expected =
+        mockQuaternion.w * mockQuaternion.w +
+        mockQuaternion.x * mockQuaternion.x +
+        mockQuaternion.y * mockQuaternion.y +
+        mockQuaternion.z * mockQuaternion.z;
+
+      expect(r).toBe(expected);
+    });
   });
 });
