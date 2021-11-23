@@ -1,7 +1,7 @@
 import { map } from '../../fn/array';
 import { subtract as _subtract } from '../../fn/base';
 
-import { vectorN, vectorNr } from './vector.types';
+import { vectorNr } from './vector.types';
 
 /**
  * Subtracts all values of the same vector component.
