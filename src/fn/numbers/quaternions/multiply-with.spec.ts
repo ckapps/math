@@ -2,9 +2,10 @@ import { multiplyWith } from './multiply-with';
 
 import * as q from '../../../numbers/quaternion';
 
-describe('functional/scaleBy', () => {
+jest.mock('../../../numbers/quaternion');
+
+describe('numbers/quaternion/multiply-with', () => {
   const mockQuaternion = { w: 0, x: 0, y: 0, z: 0 };
-  const multiplySpy = jest.spyOn(q, 'multiply');
 
   it('should return a function', () => {
     expect(typeof multiplyWith(mockQuaternion)).toBe('function');
@@ -15,6 +16,6 @@ describe('functional/scaleBy', () => {
 
     fn(mockQuaternion);
 
-    expect(multiplySpy).toBeCalledWith(mockQuaternion, mockQuaternion);
+    expect(q.multiply).toBeCalledWith(mockQuaternion, mockQuaternion);
   });
 });
