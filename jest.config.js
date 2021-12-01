@@ -1,7 +1,5 @@
 module.exports = {
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  preset: 'ts-jest',
   moduleFileExtensions: ['ts', 'js'],
   testRegex: '^.+\\.spec\\.ts$',
   collectCoverageFrom: [
@@ -12,7 +10,7 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      tsConfig: './src/tsconfig.spec.json',
+      tsconfig: './src/tsconfig.spec.json',
     },
   },
 };
