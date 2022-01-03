@@ -9,3 +9,22 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'monthly'
+    commit-message:
+      prefix: 'chore'
+      prefix-development: 'chore'
+      include: 'scope'
+    labels:
+      - 'dependencies'
+      - ':gear: npm'
+      
+  ## Keeping GitHub Actions up-to-date
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: 'ci'
+      include: 'scope'
+    labels:
+      - 'dependencies'
+      - ':rocket: ci'
