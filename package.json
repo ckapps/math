@@ -64,6 +64,6 @@
     "README.md"
   ],
   "dependencies": {
-    "fp-ts": "^2.10.5"
+    "fp-ts": "^2.11.9"
   }
 }
