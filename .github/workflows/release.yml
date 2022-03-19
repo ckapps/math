@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 'lts/*'
       - run: npm ci
+      - run: npm run build:package
       - name: Release
         run: npx semantic-release
         env:
