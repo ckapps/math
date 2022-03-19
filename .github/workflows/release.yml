@@ -8,6 +8,10 @@ name: Release
       - alpha
       - '*.x'
 
+env:
+  # Disable husky
+  HUSKY: 0
+
 jobs:
   release:
     name: Release
