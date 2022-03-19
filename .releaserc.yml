@@ -1,0 +1,11 @@
+branches:
+  - main
+  - next
+  - next-major
+  # Maintainence releases
+  - '+([0-9])?(.{+([0-9]),x}).x'
+  # Prereleases
+  - name: beta
+    prerelease: true
+  - name: alpha
+    prerelease: true

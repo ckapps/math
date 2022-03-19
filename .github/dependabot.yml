@@ -10,20 +10,20 @@ updates:
     schedule:
       interval: 'monthly'
     commit-message:
-      prefix: 'chore'
+      prefix: 'fix'
       prefix-development: 'chore'
       include: 'scope'
     labels:
       - 'dependencies'
       - ':gear: npm'
-      
+
   ## Keeping GitHub Actions up-to-date
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'monthly'
     commit-message:
-      prefix: 'ci'
+      prefix: 'build'
       include: 'scope'
     labels:
       - 'dependencies'

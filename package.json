@@ -1,7 +1,7 @@
 {
   "name": "@ckapp/math",
   "description": "Package of math utilities for JS / TS",
-  "version": "0.0.45",
+  "version": "0.0.0-development",
   "license": "MIT",
   "author": "Chris",
   "bugs": {
@@ -30,7 +30,8 @@
     "release:pre": "npm run release -- --prerelease",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
@@ -50,7 +51,8 @@
     "standard-version": "^9.3.0",
     "ts-jest": "^27.0.7",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "semantic-release": "^19.0.2"
   },
   "files": [
     "**/*.d.ts",
