@@ -1,7 +1,15 @@
-![CI](https://github.com/ckapps/math/workflows/CI/badge.svg)
-[![npm version](https://badge.fury.io/js/%40ckapp%2Fmath.svg)](https://www.npmjs.com/@ckapp/math)
-[![Coverage Status](https://coveralls.io/repos/github/ckapps/math/badge.svg?branch=main)](https://coveralls.io/github/ckapps/math?branch=main)
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+<div style="text-align: center;">
+
+![CI][gh-workflow-main-badge]
+[![Coverage Status][cov-badge]][cov-url]
+[![semantic-release: angular][tool-semantic-release-badge]][tool-semantic-release-url]
+
+</div>
+<div style="text-align: center;">
+
+[![npm version][npm-latest-badge]][npm-latest-url]
+
+</div>
 
 # @ckapp/math
 
@@ -36,3 +44,11 @@ npm i @ckapp/math
 ## Building/Testing
 
 - `npm test` run tests
+
+[cov-badge]: https://coveralls.io/repos/github/ckapps/math/badge.svg?branch=main
+[cov-url]: (https://coveralls.io/github/ckapps/math?branch=main)
+[gh-workflow-main-badge]: https://github.com/ckapps/math/workflows/CI/badge.svg
+[npm-latest-badge]: https://img.shields.io/npm/v/@ckapp/math/latest.svg
+[npm-latest-url]: https://www.npmjs.com/@ckapp/math
+[tool-semantic-release-badge]: https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release
+[tool-semantic-release-url]: https://github.com/semantic-release/semantic-release
