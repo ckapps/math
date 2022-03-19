@@ -5,70 +5,12 @@
 
 * **ci:** build assets for npm ([0a4cd59](https://github.com/ckapps/math/commit/0a4cd59b0df4e8fac4927b8d52873362175230fa))
 
-# Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-### [0.0.45](https://github.com/ckapps/math/compare/v0.0.44...v0.0.45) (2022-01-03)
-
-### [0.0.44](https://github.com/ckapps/math/compare/v0.0.43...v0.0.44) (2022-01-03)
-
-### [0.0.43](https://github.com/ckapps/math/compare/v0.0.42...v0.0.43) (2022-01-03)
-
-### [0.0.42](https://github.com/ckapps/math/compare/v0.0.41...v0.0.42) (2022-01-03)
-
-### [0.0.41](https://github.com/ckapps/math/compare/v0.0.40...v0.0.41) (2022-01-02)
-
-### [0.0.40](https://github.com/ckapps/math/compare/v0.0.39...v0.0.40) (2022-01-02)
-
-### [0.0.39](https://github.com/ckapps/math/compare/v0.0.38...v0.0.39) (2021-12-01)
-
-### [0.0.38](https://github.com/ckapps/math/compare/v0.0.37...v0.0.38) (2021-12-01)
-
-### [0.0.37](https://github.com/ckapps/math/compare/v0.0.36...v0.0.37) (2021-12-01)
-
-### [0.0.36](https://github.com/ckapps/math/compare/v0.0.35...v0.0.36) (2021-12-01)
-
-### [0.0.35](https://github.com/ckapps/math/compare/v0.0.34...v0.0.35) (2021-12-01)
-
-### [0.0.34](https://github.com/ckapps/math/compare/v0.0.33...v0.0.34) (2021-12-01)
-
-### [0.0.33](https://github.com/ckapps/math/compare/v0.0.32...v0.0.33) (2021-11-23)
-
-### [0.0.32](https://github.com/ckapps/math/compare/v0.0.31...v0.0.32) (2021-11-23)
-
-### [0.0.31](https://github.com/ckapps/math/compare/v0.0.30...v0.0.31) (2021-11-23)
-
-### [0.0.30](https://github.com/ckapps/math/compare/v0.0.29...v0.0.30) (2021-11-23)
-
-### [0.0.29](https://github.com/ckapps/math/compare/v0.0.28...v0.0.29) (2021-11-23)
-
-### [0.0.28](https://github.com/ckapps/math/compare/v0.0.27...v0.0.28) (2021-11-23)
-
-### [0.0.27](https://github.com/ckapps/math/compare/v0.0.26...v0.0.27) (2021-11-23)
-
-### [0.0.26](https://github.com/ckapps/math/compare/v0.0.25...v0.0.26) (2021-11-23)
-
-### [0.0.25](https://github.com/ckapps/math/compare/v0.0.24...v0.0.25) (2021-11-23)
-
 ### [0.0.24](https://github.com/ckapps/math/compare/v0.0.23...v0.0.24) (2021-11-23)
 
 
 ### Bug Fixes
 
 * minor warnings ([1b7f6a6](https://github.com/ckapps/math/commit/1b7f6a6e64e2f36c3c650877ccf89dc00230bcd3))
-
-### [0.0.23](https://github.com/ckapps/math/compare/v0.0.22...v0.0.23) (2021-11-23)
-
-### [0.0.22](https://github.com/ckapps/math/compare/v0.0.21...v0.0.22) (2021-11-23)
-
-### [0.0.21](https://github.com/ckapps/math/compare/v0.0.20...v0.0.21) (2021-11-23)
-
-### [0.0.20](https://github.com/ckapps/math/compare/v0.0.19...v0.0.20) (2021-11-23)
-
-### [0.0.19](https://github.com/ckapps/math/compare/v0.0.18...v0.0.19) (2021-11-23)
-
-### [0.0.18](https://github.com/ckapps/math/compare/v0.0.17...v0.0.18) (2021-11-08)
 
 ### [0.0.17](https://github.com/ckapps/math/compare/v0.0.16...v0.0.17) (2021-11-08)
 
@@ -95,12 +37,6 @@ All notable changes to this project will be documented in this file. See [standa
 * **vector:** improve typing for invert ([615b8fe](https://github.com/ckapps/math/commit/615b8fe83e34e755e798851fc5fd6641a9a26c3b))
 * **vector:** improve typing for subtract ([43329c1](https://github.com/ckapps/math/commit/43329c19dd59c3f3fc31981f3d68b43580c24834))
 * **vector:** typing for divide ([4d8fc1c](https://github.com/ckapps/math/commit/4d8fc1c368c49744dacab71c251254a4bfef87b1))
-
-### [0.0.15](https://github.com/ckapps/math/compare/v0.0.14...v0.0.15) (2021-04-01)
-
-### [0.0.14](https://github.com/ckapps/math/compare/v0.0.13...v0.0.14) (2021-01-08)
-
-### [0.0.13](https://github.com/ckapps/math/compare/v0.0.12...v0.0.13) (2020-12-15)
 
 ### [0.0.12](https://github.com/ckapps/math/compare/v0.0.11...v0.0.12) (2020-11-09)
 
@@ -136,8 +72,6 @@ All notable changes to this project will be documented in this file. See [standa
 * move chain to functional flow functions ([d8c2154](https://github.com/ckapps/math/commit/d8c2154c3ae32309595d4c8b4a43c1657aa7765a))
 * renamed file to polynomial ([7076871](https://github.com/ckapps/math/commit/7076871e71b748e26f15300385aae3b01c72c137))
 * renamed functional module to fn ([cfdad24](https://github.com/ckapps/math/commit/cfdad24f1ec9085aced189edd8aa019f7d9f51a6))
-
-### [0.0.9](https://github.com/ckapps/math/compare/v0.0.8...v0.0.9) (2020-10-12)
 
 ### [0.0.8](https://github.com/ckapps/math/compare/v0.0.7...v0.0.8) (2020-10-12)
 
@@ -177,28 +111,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 * add readonly modifier ([2e4691d](https://github.com/ckapps/math/commit/2e4691dc2696f98e436b52a34d856194dda42105))
 
-### [0.0.5](https://github.com/ckapps/math/compare/v0.0.4...v0.0.5) (2020-09-20)
-
-### [0.0.4](https://github.com/ckapps/math/compare/v0.0.3...v0.0.4) (2020-09-17)
-
 ### [0.0.3](https://github.com/ckapps/math/compare/v0.0.2...v0.0.3) (2020-09-17)
 
 
 ### Bug Fixes
 
 * removed pre release flag ([0cf7d85](https://github.com/ckapps/math/commit/0cf7d857d2139d71cd5a0d1f1eb640ecbe60ddb6))
-
-### [0.0.2](https://github.com/ckapps/math/compare/v0.0.2-18...v0.0.2) (2020-09-17)
-
-### [0.0.2-18](https://github.com/ckapps/math/compare/v0.0.2-17...v0.0.2-18) (2020-09-17)
-
-### [0.0.2-17](https://github.com/ckapps/math/compare/v0.0.2-16...v0.0.2-17) (2020-09-17)
-
-### [0.0.2-16](https://github.com/ckapps/math/compare/v0.0.2-15...v0.0.2-16) (2020-09-17)
-
-### [0.0.2-15](https://github.com/ckapps/math/compare/v0.0.2-14...v0.0.2-15) (2020-09-17)
-
-### [0.0.2-14](https://github.com/ckapps/math/compare/v0.0.2-13...v0.0.2-14) (2020-09-16)
 
 ### [0.0.2-13](https://github.com/ckapps/math/compare/v0.0.2-12...v0.0.2-13) (2020-09-16)
 
@@ -215,10 +133,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * typing for vector ([c79259f](https://github.com/ckapps/math/commit/c79259f27a281924cd0040f70403046144f09a9a))
-
-### [0.0.2-12](https://github.com/ckapps/math/compare/v0.0.2-11...v0.0.2-12) (2020-09-16)
-
-### [0.0.2-11](https://github.com/ckapps/math/compare/v0.0.2-10...v0.0.2-11) (2020-09-16)
 
 ### [0.0.2-10](https://github.com/ckapps/math/compare/v0.0.2-9...v0.0.2-10) (2020-09-15)
 
@@ -239,11 +153,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * implement lerp ([bb9c86b](https://github.com/ckapps/math/commit/bb9c86bd338f444d53ed7b3ae2c54112fbc44258))
 
-### [0.0.2-8](https://github.com/ckapps/math/compare/v0.0.2-7...v0.0.2-8) (2020-09-15)
-
-### [0.0.2-7](https://github.com/ckapps/math/compare/v0.0.2-6...v0.0.2-7) (2020-09-15)
-
-### [0.0.2-6](https://github.com/ckapps/math/compare/v0.0.2-5...v0.0.2-6) (2020-09-15)
 
 ### 0.0.2-5 (2020-09-15)
 
