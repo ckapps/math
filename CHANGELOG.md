@@ -1,3 +1,10 @@
+## [0.0.47](https://github.com/ckapps/math/compare/v0.0.46...v0.0.47) (2022-03-19)
+
+
+### Bug Fixes
+
+* **ci:** build assets for npm ([0a4cd59](https://github.com/ckapps/math/commit/0a4cd59b0df4e8fac4927b8d52873362175230fa))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
