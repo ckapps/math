@@ -8,6 +8,7 @@
 <div style="text-align: center;">
 
 [![npm version][npm-latest-badge]][npm-latest-url]
+[![npm version][npm-next-badge]][npm-next-url]
 
 </div>
 
@@ -50,5 +51,7 @@ npm i @ckapp/math
 [gh-workflow-main-badge]: https://github.com/ckapps/math/workflows/CI/badge.svg
 [npm-latest-badge]: https://img.shields.io/npm/v/@ckapp/math/latest.svg
 [npm-latest-url]: https://www.npmjs.com/@ckapp/math
+[npm-next-badge]: https://img.shields.io/npm/v/@ckapp/math/next.svg
+[npm-next-url]: https://www.npmjs.com/@ckapp/math
 [tool-semantic-release-badge]: https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release
 [tool-semantic-release-url]: https://github.com/semantic-release/semantic-release
