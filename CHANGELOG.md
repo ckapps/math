@@ -1,3 +1,12 @@
+Changelog
+
+## [0.0.48](https://github.com/ckapps/math/compare/v0.0.47...v0.0.48) (2022-03-28)
+
+
+### Bug Fixes
+
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([91a3b24](https://github.com/ckapps/math/commit/91a3b24608ceaaf57ec2f6b8a1da059104d67a8d))
+
 ## [0.0.47](https://github.com/ckapps/math/compare/v0.0.46...v0.0.47) (2022-03-19)
 
 
