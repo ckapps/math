@@ -1,5 +1,6 @@
 module.exports = {
   preset: 'ts-jest',
+  maxWorkers: '25%',
   moduleFileExtensions: ['ts', 'js'],
   testRegex: '^.+\\.spec\\.ts$',
   collectCoverageFrom: [
