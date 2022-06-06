@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.50](https://github.com/ckapps/math/compare/v0.0.49...v0.0.50) (2022-06-06)
+
+
+### Bug Fixes
+
+* **deps:** bump npm from 8.5.5 to 8.12.0 ([#126](https://github.com/ckapps/math/issues/126)) ([6312cfd](https://github.com/ckapps/math/commit/6312cfd8fabc705b7fb6bb2d0de9d0ac4b485b95))
+
 ## [0.0.49](https://github.com/ckapps/math/compare/v0.0.48...v0.0.49) (2022-05-29)
 
 
