@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.51](https://github.com/ckapps/math/compare/v0.0.50...v0.0.51) (2022-07-02)
+
+
+### Bug Fixes
+
+* **deps:** bump shell-quote from 1.7.2 to 1.7.3 ([#129](https://github.com/ckapps/math/issues/129)) ([fa3363c](https://github.com/ckapps/math/commit/fa3363c4e25e9584de8ca5808e7efa3ca0f67d86))
+
 ## [0.0.50](https://github.com/ckapps/math/compare/v0.0.49...v0.0.50) (2022-06-06)
 
 
