@@ -31,6 +31,9 @@
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },
+  "dependencies": {
+    "fp-ts": "^2.12.3"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
@@ -64,8 +67,5 @@
     "LICENSE",
     "package.json",
     "README.md"
-  ],
-  "dependencies": {
-    "fp-ts": "^2.12.1"
-  }
+  ]
 }
