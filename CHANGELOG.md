@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.53](https://github.com/ckapps/math/compare/v0.0.52...v0.0.53) (2022-09-04)
+
+
+### Bug Fixes
+
+* **deps:** bump fp-ts from 2.12.2 to 2.12.3 ([50737fd](https://github.com/ckapps/math/commit/50737fd50067c3504d6b250bdbebeb05c7513f18))
+
 ## [0.0.52](https://github.com/ckapps/math/compare/v0.0.51...v0.0.52) (2022-08-17)
 
 
