@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { equals } from './equals';
 
 type Vector = number[];

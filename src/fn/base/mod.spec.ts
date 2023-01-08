@@ -1,3 +1,4 @@
+import { describe, expect, it, test } from '@jest/globals';
 import { mod } from './mod';
 
 describe('functional/mod', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { divide } from './divide';
 
 describe('base/divide', () => {

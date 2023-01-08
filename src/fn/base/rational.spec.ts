@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { rational } from './rational';
 
 describe('functional/rational', () => {

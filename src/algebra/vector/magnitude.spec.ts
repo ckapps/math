@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { magnitude, sqrtMagnitude } from './magnitude';
 
 describe('algebra/vector/magnitude', () => {

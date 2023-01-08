@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { normalized } from './normalized';
 
 import { magnitude } from './magnitude';

@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { lateralSurfaceArea } from './lateral-surface-area.cylinder';
 
 describe('geometry/objects/cylinder', () => {

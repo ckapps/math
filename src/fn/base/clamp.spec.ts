@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from '@jest/globals';
 import { clamp } from './clamp';
 
 import * as base from '../../base/clamp';

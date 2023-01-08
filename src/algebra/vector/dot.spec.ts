@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { dot, dotBy } from './dot';
 
 describe('algebra/vector/dot', () => {

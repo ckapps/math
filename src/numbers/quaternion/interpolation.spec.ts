@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { lerp, slerp } from './interpolation';
 
 import { Quaternion } from './quaternion';
