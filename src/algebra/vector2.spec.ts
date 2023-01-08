@@ -1,3 +1,4 @@
+import { describe, expect, it, test } from '@jest/globals';
 import * as vector2 from './vector2';
 
 describe('algebra/vector2', () => {

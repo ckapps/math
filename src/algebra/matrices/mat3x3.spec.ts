@@ -1,3 +1,4 @@
+import { describe, expect, it, test } from '@jest/globals';
 import * as mat3 from './mat3x3';
 
 describe('algebra/mat3x3', () => {

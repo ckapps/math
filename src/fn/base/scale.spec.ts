@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { scale } from './scale';
 
 describe('functional/scale', () => {

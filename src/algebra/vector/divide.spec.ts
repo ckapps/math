@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { divide } from './divide';
 
 describe('algebra/vector/divide', () => {

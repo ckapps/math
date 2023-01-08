@@ -1,3 +1,4 @@
+import { describe, expect, it, test } from '@jest/globals';
 import { scale, scaleBy } from './scale';
 
 type Vector = number[];

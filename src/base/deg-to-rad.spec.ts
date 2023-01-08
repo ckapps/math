@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { degToRad } from './deg-to-rad';
 
 describe('base/deg-to-rad', () => {

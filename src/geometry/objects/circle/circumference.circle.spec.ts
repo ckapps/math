@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { circumference } from './circumference.circle';
 
 describe('geometry/objects/circle', () => {

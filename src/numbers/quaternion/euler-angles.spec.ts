@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { fromEulerZXY, toEulerAngles } from './euler-angles';
 
 describe('algebra/quaternion', () => {

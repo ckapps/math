@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import * as q from './operators';
 
 import { Quaternion } from './quaternion';

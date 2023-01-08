@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { multiply } from './multiply';
 
 describe('base/multiply', () => {

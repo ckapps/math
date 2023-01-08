@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { nthRoot } from './nth-root';
 
 describe('functional/nthRoot', () => {

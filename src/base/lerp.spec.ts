@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { lerp } from './lerp';
 
 describe('base/clamp', () => {

@@ -1,6 +1,7 @@
+import { describe, expect, test } from '@jest/globals';
 import { down, up, vec3, zero } from '../../../algebra/vector3';
 import { Plane } from './plane.type';
-import { PlaneSide, onSideOfPlane } from './side-of.plane';
+import { onSideOfPlane, PlaneSide } from './side-of.plane';
 
 describe('geometry/euclidean/plane/side-of-plane', () => {
   const plane: Plane<Readonly<vec3>> = {

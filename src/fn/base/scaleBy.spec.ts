@@ -1,5 +1,6 @@
-import { scaleBy } from './scaleBy';
+import { describe, expect, it, jest } from '@jest/globals';
 import * as scale from './scale';
+import { scaleBy } from './scaleBy';
 
 describe('functional/scaleBy', () => {
   it('should return a function', () => {

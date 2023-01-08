@@ -1,3 +1,4 @@
+import { describe, expect, it, test } from '@jest/globals';
 import { modWrap } from './mod-wrap';
 
 describe('functional/mod-wrap', () => {

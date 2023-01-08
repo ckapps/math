@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from '@jest/globals';
 import { multiplyWith } from './multiply-with';
 
 import * as q from '../../../numbers/quaternion';

@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { min } from './min';
 
 type Vector = number[];

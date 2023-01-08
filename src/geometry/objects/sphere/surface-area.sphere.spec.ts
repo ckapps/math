@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { surfaceArea } from './surface-area.sphere';
 
 describe('geometry/objects/sphere', () => {
