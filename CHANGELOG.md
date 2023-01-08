@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.55](https://github.com/ckapps/math/compare/v0.0.54...v0.0.55) (2023-01-08)
+
+
+### Bug Fixes
+
+* **deps:** make `tslib` a runtime dependency ([#194](https://github.com/ckapps/math/issues/194)) ([b4fce85](https://github.com/ckapps/math/commit/b4fce852750fae00eb46ca5757c08c7a05a1f454)), closes [#193](https://github.com/ckapps/math/issues/193)
+
 ## [0.0.54](https://github.com/ckapps/math/compare/v0.0.53...v0.0.54) (2023-01-08)
 
 
