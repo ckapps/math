@@ -1,5 +1,15 @@
 Changelog
 
+## [0.0.57](https://github.com/ckapps/math/compare/v0.0.56...v0.0.57) (2023-02-18)
+
+
+### Bug Fixes
+
+* name prerelease tag for main ([2be54cc](https://github.com/ckapps/math/commit/2be54cceba9dbd4d121b7fa59127b7828f78876e))
+* pre-releases from `main` ([73b5b9d](https://github.com/ckapps/math/commit/73b5b9d2df169d64bf52a58a45ff36ba969b287a))
+* re-add prerelease to beta ([873368c](https://github.com/ckapps/math/commit/873368cf57305eda8e87d327ebc5affb43e6d9ef))
+* use branch `latest` for npm latest dist tag ([97a615b](https://github.com/ckapps/math/commit/97a615b5a95b098151f96fc570e2d4b5163a4920))
+
 ## [0.0.56](https://github.com/ckapps/math/compare/v0.0.55...v0.0.56) (2023-02-18)
 
 
