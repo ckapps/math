@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.58-next.1](https://github.com/ckapps/math/compare/v0.0.57...v0.0.58-next.1) (2023-02-18)
+
+
+### Bug Fixes
+
+* fake release ([542fb9d](https://github.com/ckapps/math/commit/542fb9d507dedf2ae79995235b55ef84fa15bf32))
+
 ## [0.0.57](https://github.com/ckapps/math/compare/v0.0.56...v0.0.57) (2023-02-18)
 
 
