@@ -3,7 +3,6 @@ name: Release
   push:
     branches:
       - main
-      - next
       - beta
       - alpha
       - '*.x'

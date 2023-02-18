@@ -1,9 +1,9 @@
 branches:
-  - main
-  - next
-  - next-major
-  # Maintainence releases
+  # Maintenance releases
   - '+([0-9])?(.{+([0-9]),x}).x'
+  # Next
+  - name: main
+    channel: next
   # Prereleases
   - name: beta
     prerelease: true
