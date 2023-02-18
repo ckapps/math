@@ -4,7 +4,7 @@ branches:
   # Prereleases
   - name: main
     channel: next
-    prerelease: true
+    prerelease: next
   - name: beta
     prerelease: true
   - name: alpha
