@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.58-next.2](https://github.com/ckapps/math/compare/v0.0.58-next.1...v0.0.58-next.2) (2023-04-26)
+
+
+### Bug Fixes
+
+* **deps:** bump yaml from 2.2.1 to 2.2.2 ([#238](https://github.com/ckapps/math/issues/238)) ([99b7dc8](https://github.com/ckapps/math/commit/99b7dc872b13e2861a799d7dbef2573b911f1898))
+
 ## [0.0.58-next.1](https://github.com/ckapps/math/compare/v0.0.57...v0.0.58-next.1) (2023-02-18)
 
 
