@@ -18,10 +18,12 @@ Utility package for math related operations.
 
 ## Branches / Versions
 
-- [main](https://github.com/ckapps/math/commits/main) - Contains the most recent version
+- [main](https://github.com/ckapps/math/commits/main) - Contains the most recent (unstable) version
+
+- [latest](https://github.com/ckapps/math/tree/latest) - Contains the latest stable version
 
 ```sh
-npm install @ckapp/math
+npm install @ckapp/math@latest
 ```
 
 - [next](https://github.com/ckapps/math/tree/next) - Contains the next version
