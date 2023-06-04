@@ -1,5 +1,12 @@
 Changelog
 
+## [0.0.58-next.4](https://github.com/ckapps/math/compare/v0.0.58-next.3...v0.0.58-next.4) (2023-06-04)
+
+
+### Bug Fixes
+
+* **deps:** bump tslib from 2.5.0 to 2.5.3 ([#249](https://github.com/ckapps/math/issues/249)) ([e466721](https://github.com/ckapps/math/commit/e466721cb7058a1bc21b725896c9d7c163957ef6))
+
 ## [0.0.58-next.3](https://github.com/ckapps/math/compare/v0.0.58-next.2...v0.0.58-next.3) (2023-05-01)
 
 
