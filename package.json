@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "fp-ts": "^2.16.0",
-    "tslib": "^2.5.3"
+    "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
